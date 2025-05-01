@@ -1,0 +1,10 @@
+Setting up telemc-py.
+Python script is running with PID: 3270902
+Processing payload: 1 for function: language-detection
+Processing payload: 50 for function: language-detection
+Processing payload: 512 for function: language-detection
+Processing payload: 1024 for function: language-detection
+Processing payload: 2048 for function: language-detection
+Attempting to terminate the Python script with PID: 3270902...
+Python script with PID 3270902 terminated successfully.
+Measure script completed.

@@ -1,0 +1,66 @@
+-----
+Run: 1
+Payload: {"input_text": "Hallo ich bin ein Mensch der Deutsch spricht."}
+Start-time: 1736539595.481094439
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-5vbn9
+Container ID: b6fb0d94d7f28e743638202de8ff42fd550958bbdbd928a949bb3827b2db85b4
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-h75dl
+Container ID: ce6c45951e39845adc4ff3aeae6d32433a813576ac19fedd3577cf66ee5a4585
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-lbjhf
+Container ID: fdbb351962bca9b00d841a45de617402887fc4e51a2343b4f866e271ed79b847
+End-time: 1736539696.229676325
+-----
+Run: 2
+Payload: {"input_text": "Hallo ich bin ein Mensch der Deutsch spricht."}
+Start-time: 1736539696.627174709
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-5vbn9
+Container ID: b6fb0d94d7f28e743638202de8ff42fd550958bbdbd928a949bb3827b2db85b4
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-h75dl
+Container ID: ce6c45951e39845adc4ff3aeae6d32433a813576ac19fedd3577cf66ee5a4585
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-lbjhf
+Container ID: fdbb351962bca9b00d841a45de617402887fc4e51a2343b4f866e271ed79b847
+End-time: 1736539734.754740583
+-----
+Run: 3
+Payload: {"input_text": "Hallo ich bin ein Mensch der Deutsch spricht."}
+Start-time: 1736539735.219210422
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-h75dl
+Container ID: ce6c45951e39845adc4ff3aeae6d32433a813576ac19fedd3577cf66ee5a4585
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-lbjhf
+Container ID: fdbb351962bca9b00d841a45de617402887fc4e51a2343b4f866e271ed79b847
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-v2qn6
+Container ID: 
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-w9p28
+Container ID: a34d44569f18652d8c09d7efb3c0cad2c0cd8fa264a4703c4d2081ccc9929955
+End-time: 1736539827.323770464
+-----
+Run: 4
+Payload: {"input_text": "Hallo ich bin ein Mensch der Deutsch spricht."}
+Start-time: 1736539827.603161543
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-h75dl
+Container ID: ce6c45951e39845adc4ff3aeae6d32433a813576ac19fedd3577cf66ee5a4585
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-lbjhf
+Container ID: fdbb351962bca9b00d841a45de617402887fc4e51a2343b4f866e271ed79b847
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-n9hzb
+Container ID: 978ebb9ff5e9abe808a6f7409fc3bb872700aad7554de85a065dd59b4538b8d6
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-v2qn6
+Container ID: 
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-w9p28
+Container ID: a34d44569f18652d8c09d7efb3c0cad2c0cd8fa264a4703c4d2081ccc9929955
+End-time: 1736539878.015893464
+-----
+Run: 5
+Payload: {"input_text": "Hallo ich bin ein Mensch der Deutsch spricht."}
+Start-time: 1736539878.239821637
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-72sgp
+Container ID: 03ac0b1ff9004cc1827df99d599b5efdc1ef88afae817be932fc08b1fc5346f8
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-h75dl
+Container ID: ce6c45951e39845adc4ff3aeae6d32433a813576ac19fedd3577cf66ee5a4585
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-lbjhf
+Container ID: fdbb351962bca9b00d841a45de617402887fc4e51a2343b4f866e271ed79b847
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-n9hzb
+Container ID: 978ebb9ff5e9abe808a6f7409fc3bb872700aad7554de85a065dd59b4538b8d6
+Pod Name (language-detection-wasm): language-detection-wasm-00001-deployment-65769d85cc-v2qn6
+Container ID: c8212dffd07291e80a412bff82af3e38ea130e68f33ad76fa57bea73afc2f086
+End-time: 1736539936.713033489
+-----

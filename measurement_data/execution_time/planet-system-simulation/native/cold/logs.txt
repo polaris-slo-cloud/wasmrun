@@ -1,0 +1,15 @@
+Setting up telemc-py.
+Python script is running with PID: 2719306
+Processing payload: 10000 for function: planet-system-simulation
+Processing payload: 100000 for function: planet-system-simulation
+Processing payload: 1000000 for function: planet-system-simulation
+Processing payload: 2500000 for function: planet-system-simulation
+Attempting to terminate the Python script with PID: 2719306...
+Python script with PID 2719306 terminated successfully.
+Searching for ksvc matching function names: fibonacci|get-prime-numbers|fuzzy-search|create-mandelbrot-bitmap|planet-system-simulation|audio-generation|encrypt-message|decrypt-message|image-resize|hello-world|language-detection
+Found the following ksvc to delete:
+planet-system-simulation-native
+Deleting ksvc: planet-system-simulation-native
+Pod planet-system-simulation-native-00001-deployment-697bb58d4vvd8s deleted successfully.
+Running execution time test for planet-system-simulation with wasm runtime - cold
+Cold start is enabled.

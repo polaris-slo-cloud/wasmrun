@@ -1,0 +1,36 @@
+-----
+Run: 1
+Payload: {"search_term": "apple"}
+Start-time: 1736537184.327831305
+Pod Name (fuzzy-search-native): fuzzy-search-native-00001-deployment-bffd9689b-4m5fb
+Container ID: f59dcb6d0b51d77ce200df0999cf322540803f32f5136cdce5242785f522c060
+End-time: 1736537191.973419684
+-----
+Run: 2
+Payload: {"search_term": "apple"}
+Start-time: 1736537192.312385598
+Pod Name (fuzzy-search-native): fuzzy-search-native-00001-deployment-bffd9689b-4m5fb
+Container ID: f59dcb6d0b51d77ce200df0999cf322540803f32f5136cdce5242785f522c060
+End-time: 1736537200.027663487
+-----
+Run: 3
+Payload: {"search_term": "apple"}
+Start-time: 1736537200.257916909
+Pod Name (fuzzy-search-native): fuzzy-search-native-00001-deployment-bffd9689b-4m5fb
+Container ID: f59dcb6d0b51d77ce200df0999cf322540803f32f5136cdce5242785f522c060
+End-time: 1736537208.223528762
+-----
+Run: 4
+Payload: {"search_term": "apple"}
+Start-time: 1736537208.485543531
+Pod Name (fuzzy-search-native): fuzzy-search-native-00001-deployment-bffd9689b-4m5fb
+Container ID: f59dcb6d0b51d77ce200df0999cf322540803f32f5136cdce5242785f522c060
+End-time: 1736537216.282018313
+-----
+Run: 5
+Payload: {"search_term": "apple"}
+Start-time: 1736537216.543684171
+Pod Name (fuzzy-search-native): fuzzy-search-native-00001-deployment-bffd9689b-4m5fb
+Container ID: f59dcb6d0b51d77ce200df0999cf322540803f32f5136cdce5242785f522c060
+End-time: 1736537223.986746841
+-----

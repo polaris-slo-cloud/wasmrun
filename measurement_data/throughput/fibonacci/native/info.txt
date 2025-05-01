@@ -1,0 +1,36 @@
+-----
+Run: 1
+Payload: {"number": 10000}
+Start-time: 1736530983.953046346
+Pod Name (fibonacci-native): fibonacci-native-00001-deployment-b54dd9c8f-82vms
+Container ID: eefc80ccfee948e10652c61b3230d3c26608fc2dda23a0acb13fb02693024615
+End-time: 1736530997.164193070
+-----
+Run: 2
+Payload: {"number": 10000}
+Start-time: 1736530997.452050986
+Pod Name (fibonacci-native): fibonacci-native-00001-deployment-b54dd9c8f-82vms
+Container ID: eefc80ccfee948e10652c61b3230d3c26608fc2dda23a0acb13fb02693024615
+End-time: 1736531004.636998502
+-----
+Run: 3
+Payload: {"number": 10000}
+Start-time: 1736531004.911640512
+Pod Name (fibonacci-native): fibonacci-native-00001-deployment-b54dd9c8f-82vms
+Container ID: eefc80ccfee948e10652c61b3230d3c26608fc2dda23a0acb13fb02693024615
+End-time: 1736531012.574358181
+-----
+Run: 4
+Payload: {"number": 10000}
+Start-time: 1736531012.788215490
+Pod Name (fibonacci-native): fibonacci-native-00001-deployment-b54dd9c8f-82vms
+Container ID: eefc80ccfee948e10652c61b3230d3c26608fc2dda23a0acb13fb02693024615
+End-time: 1736531020.315380373
+-----
+Run: 5
+Payload: {"number": 10000}
+Start-time: 1736531020.563795074
+Pod Name (fibonacci-native): fibonacci-native-00001-deployment-b54dd9c8f-82vms
+Container ID: eefc80ccfee948e10652c61b3230d3c26608fc2dda23a0acb13fb02693024615
+End-time: 1736531028.114201066
+-----

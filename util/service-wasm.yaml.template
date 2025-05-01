@@ -1,0 +1,29 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: ${FUNCTION_NAME}
+spec:
+  template:
+    metadata:
+      annotations:
+        module.wasm.image/variant: compat-smart
+    spec:
+      runtimeClassName: wasmedge
+      containers:
+      - name: ${FUNCTION_NAME}
+        image: ${IMAGE_REGISTRY}/${FUNCTION_NAME}:latest
+        ports:
+        - containerPort: 1234
+          protocol: TCP
+        livenessProbe:
+          tcpSocket:
+            port: 1234
+        env:
+          - name: AWS_ACCESS_KEY_ID
+            value: ${AWS_ACCESS_KEY_ID}
+          - name: AWS_SECRET_ACCESS_KEY
+            value: ${AWS_SECRET_ACCESS_KEY}
+          - name: AWS_DEFAULT_REGION
+            value: ${AWS_DEFAULT_REGION}
+          - name: REDIS_URL
+            value: ${REDIS_URL}

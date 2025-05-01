@@ -1,0 +1,10 @@
+Setting up telemc-py.
+Python script is running with PID: 2572335
+Processing payload: 128 for function: create-mandelbrot-bitmap
+Processing payload: 256 for function: create-mandelbrot-bitmap
+Processing payload: 512 for function: create-mandelbrot-bitmap
+Processing payload: 1024 for function: create-mandelbrot-bitmap
+Processing payload: 2048 for function: create-mandelbrot-bitmap
+Attempting to terminate the Python script with PID: 2572335...
+Python script with PID 2572335 terminated successfully.
+Measure script completed.

@@ -1,0 +1,35 @@
+Setting up telemc-py.
+Python script is running with PID: 1432133
+Processing payload: 1.5 for function: image-resize
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Processing payload: 2.0 for function: image-resize
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Processing payload: 2.5 for function: image-resize
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Processing payload: 3.0 for function: image-resize
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Pod for function: image-resize-wasm already running.
+Attempting to terminate the Python script with PID: 1432133...
+Python script with PID 1432133 terminated successfully.
+Searching for ksvc matching function names: fibonacci|get-prime-numbers|fuzzy-search|create-mandelbrot-bitmap|planet-system-simulation|audio-generation|encrypt-message|decrypt-message|image-resize|hello-world|language-detection
+Found the following ksvc to delete:
+image-resize-wasm
+Deleting ksvc: image-resize-wasm
+Pod image-resize-wasm-00001-deployment-6f67c77b77-gjbbx deleted successfully.
+Running execution time test for hello-world with native runtime - warm
+Warm start is enabled.

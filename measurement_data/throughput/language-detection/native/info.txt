@@ -1,0 +1,34 @@
+-----
+Run: 1
+Payload: {"input_text": "Hallo ich bin ein Mensch der Deutsch spricht."}
+Start-time: 1736540168.269216481
+Pod Name (language-detection-native): language-detection-native-00001-deployment-5489f6ff86-tjpnd
+Container ID: aa17573c2ae726049b160e5977192f35998722dfd856d448296854c5fd3f1ef8
+End-time: 1736540176.128721505
+-----
+Run: 2
+Payload: {"input_text": "Hallo ich bin ein Mensch der Deutsch spricht."}
+Start-time: 1736540176.349150174
+Pod Name (language-detection-native): language-detection-native-00001-deployment-5489f6ff86-tjpnd
+Container ID: aa17573c2ae726049b160e5977192f35998722dfd856d448296854c5fd3f1ef8
+End-time: 1736540184.328488043
+-----
+Run: 3
+Payload: {"input_text": "Hallo ich bin ein Mensch der Deutsch spricht."}
+Start-time: 1736540184.587037564
+Pod Name (language-detection-native): language-detection-native-00001-deployment-5489f6ff86-tjpnd
+Container ID: aa17573c2ae726049b160e5977192f35998722dfd856d448296854c5fd3f1ef8
+End-time: 1736540192.263176008
+-----
+Run: 4
+Payload: {"input_text": "Hallo ich bin ein Mensch der Deutsch spricht."}
+Start-time: 1736540192.608053123
+Pod Name (language-detection-native): language-detection-native-00001-deployment-5489f6ff86-tjpnd
+Container ID: aa17573c2ae726049b160e5977192f35998722dfd856d448296854c5fd3f1ef8
+End-time: 1736540200.315668833
+-----
+Run: 5
+Payload: {"input_text": "Hallo ich bin ein Mensch der Deutsch spricht."}
+Start-time: 1736540223.119869109
+End-time: 1736540253.857688646
+-----

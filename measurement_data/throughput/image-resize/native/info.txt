@@ -1,0 +1,88 @@
+-----
+Run: 1
+Payload: {"scale_factor": 2.0, "storage_type": "memory", "path": "file.jpg"}
+Start-time: 1738696295.595019947
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-r4r7d
+Container ID: 768b190b8f25b2ffdeab5e4f6e64568905ec8e2e5a1fc74b67bf069b8d8f695f
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-tg22b
+Container ID: cdc22e783a75b88d809360c263cf56e7cd8530e3aa4e13b28eaa579a76ff337c
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-wlh76
+Container ID: 68e869a47d50ff5267f2fdbbd5be5f17e573431b22f5961542f3a3f70f4fa590
+End-time: 1738696450.743210323
+-----
+Run: 2
+Payload: {"scale_factor": 2.0, "storage_type": "memory", "path": "file.jpg"}
+Start-time: 1738696450.761483539
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-bqskf
+Container ID: 4cca0bd3f7299bdce45ee8a7e9fded51157872054399a98dbbbe5546acdd8c7f
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-r4r7d
+Container ID: 768b190b8f25b2ffdeab5e4f6e64568905ec8e2e5a1fc74b67bf069b8d8f695f
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-tg22b
+Container ID: cdc22e783a75b88d809360c263cf56e7cd8530e3aa4e13b28eaa579a76ff337c
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-wlh76
+Container ID: 68e869a47d50ff5267f2fdbbd5be5f17e573431b22f5961542f3a3f70f4fa590
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-wzgkv
+Container ID: c8db69661328937ba94766d9b55a657235855c0d665d9e36ed06cc05552bd487
+End-time: 1738696567.051080100
+-----
+Run: 3
+Payload: {"scale_factor": 2.0, "storage_type": "memory", "path": "file.jpg"}
+Start-time: 1738696567.056883068
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-5mspr
+Container ID: 5f8e17889a5af1883eb710b41a5cf0b1e56b2ccb0a8ca3158b24b42e2ac74e1d
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-6z8pn
+Container ID: 173be42e104ce2c2a0b2b6e9d220d09f8c3ae1b66946c3384c92d72a301adaef
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-bqskf
+Container ID: 4cca0bd3f7299bdce45ee8a7e9fded51157872054399a98dbbbe5546acdd8c7f
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-r4r7d
+Container ID: 768b190b8f25b2ffdeab5e4f6e64568905ec8e2e5a1fc74b67bf069b8d8f695f
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-tg22b
+Container ID: cdc22e783a75b88d809360c263cf56e7cd8530e3aa4e13b28eaa579a76ff337c
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-wlh76
+Container ID: 68e869a47d50ff5267f2fdbbd5be5f17e573431b22f5961542f3a3f70f4fa590
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-wzgkv
+Container ID: c8db69661328937ba94766d9b55a657235855c0d665d9e36ed06cc05552bd487
+End-time: 1738696683.087964200
+-----
+Run: 4
+Payload: {"scale_factor": 2.0, "storage_type": "memory", "path": "file.jpg"}
+Start-time: 1738696683.096279616
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-245lc
+Container ID: c5a0265797925eb447a38a552e8e95feb2e064b6fdc75f4ad223a2b5ef99f118
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-5mspr
+Container ID: 5f8e17889a5af1883eb710b41a5cf0b1e56b2ccb0a8ca3158b24b42e2ac74e1d
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-6z8pn
+Container ID: 173be42e104ce2c2a0b2b6e9d220d09f8c3ae1b66946c3384c92d72a301adaef
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-bqskf
+Container ID: 4cca0bd3f7299bdce45ee8a7e9fded51157872054399a98dbbbe5546acdd8c7f
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-mxdns
+Container ID: 1cc1b565e4b1cbae906e6c32bb667743c0d7957a0f5fb01d55f3b702fc8fae40
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-r4r7d
+Container ID: 768b190b8f25b2ffdeab5e4f6e64568905ec8e2e5a1fc74b67bf069b8d8f695f
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-tg22b
+Container ID: cdc22e783a75b88d809360c263cf56e7cd8530e3aa4e13b28eaa579a76ff337c
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-wzgkv
+Container ID: c8db69661328937ba94766d9b55a657235855c0d665d9e36ed06cc05552bd487
+End-time: 1738696800.954435050
+-----
+Run: 5
+Payload: {"scale_factor": 2.0, "storage_type": "memory", "path": "file.jpg"}
+Start-time: 1738696800.961223123
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-245lc
+Container ID: c5a0265797925eb447a38a552e8e95feb2e064b6fdc75f4ad223a2b5ef99f118
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-5mspr
+Container ID: 5f8e17889a5af1883eb710b41a5cf0b1e56b2ccb0a8ca3158b24b42e2ac74e1d
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-6z8pn
+Container ID: 173be42e104ce2c2a0b2b6e9d220d09f8c3ae1b66946c3384c92d72a301adaef
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-mxdns
+Container ID: 1cc1b565e4b1cbae906e6c32bb667743c0d7957a0f5fb01d55f3b702fc8fae40
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-tg22b
+Container ID: cdc22e783a75b88d809360c263cf56e7cd8530e3aa4e13b28eaa579a76ff337c
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-wnvq5
+Container ID: e76bfea86afb59b35c823338c7b8c5560af2aff9df1391783f2a9118bbd1ec14
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-wzgkv
+Container ID: c8db69661328937ba94766d9b55a657235855c0d665d9e36ed06cc05552bd487
+Pod Name (image-resize-native): image-resize-native-00001-deployment-69897dbc57-xgqft
+Container ID: b5be58dd91becdd0a7986358939646325db50e102d2796e0adc5626cbef42dc2
+End-time: 1738696905.150481742
+-----

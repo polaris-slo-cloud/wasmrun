@@ -1,0 +1,37 @@
+-----
+Payload: 10000
+Start-time: 1739042002.789516291
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+End-time: 1739042006.570116176
+-----
+Payload: 100000
+Start-time: 1739042006.582045117
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+End-time: 1739042011.202766367
+-----
+Payload: 1000000
+Start-time: 1739042011.210439528
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+End-time: 1739042016.109011324
+-----
+Payload: 2500000
+Start-time: 1739042016.116236944
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c
+End-time: 1739042024.634203588
+-----

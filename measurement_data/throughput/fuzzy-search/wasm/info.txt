@@ -1,0 +1,46 @@
+-----
+Run: 1
+Payload: {"search_term": "apple"}
+Start-time: 1736537329.738021856
+Pod Name (fuzzy-search-wasm): fuzzy-search-wasm-00001-deployment-6d5b7ddddf-nxxb2
+Container ID: 9da3aded68fc6fcd3dede257a8c8e672d4eab1bdabed578665c56d3083d0bb89
+Pod Name (fuzzy-search-wasm): fuzzy-search-wasm-00001-deployment-6d5b7ddddf-szr47
+Container ID: 48fa65df901c873181782a77d1c5258620328bd22201b77e55aa2b222d869ef8
+End-time: 1736537341.270478112
+-----
+Run: 2
+Payload: {"search_term": "apple"}
+Start-time: 1736537341.549799871
+Pod Name (fuzzy-search-wasm): fuzzy-search-wasm-00001-deployment-6d5b7ddddf-nxxb2
+Container ID: 9da3aded68fc6fcd3dede257a8c8e672d4eab1bdabed578665c56d3083d0bb89
+Pod Name (fuzzy-search-wasm): fuzzy-search-wasm-00001-deployment-6d5b7ddddf-szr47
+Container ID: 48fa65df901c873181782a77d1c5258620328bd22201b77e55aa2b222d869ef8
+End-time: 1736537350.347854517
+-----
+Run: 3
+Payload: {"search_term": "apple"}
+Start-time: 1736537350.619545035
+Pod Name (fuzzy-search-wasm): fuzzy-search-wasm-00001-deployment-6d5b7ddddf-nxxb2
+Container ID: 9da3aded68fc6fcd3dede257a8c8e672d4eab1bdabed578665c56d3083d0bb89
+Pod Name (fuzzy-search-wasm): fuzzy-search-wasm-00001-deployment-6d5b7ddddf-szr47
+Container ID: 48fa65df901c873181782a77d1c5258620328bd22201b77e55aa2b222d869ef8
+End-time: 1736537359.623933481
+-----
+Run: 4
+Payload: {"search_term": "apple"}
+Start-time: 1736537359.845045765
+Pod Name (fuzzy-search-wasm): fuzzy-search-wasm-00001-deployment-6d5b7ddddf-nxxb2
+Container ID: 9da3aded68fc6fcd3dede257a8c8e672d4eab1bdabed578665c56d3083d0bb89
+Pod Name (fuzzy-search-wasm): fuzzy-search-wasm-00001-deployment-6d5b7ddddf-szr47
+Container ID: 48fa65df901c873181782a77d1c5258620328bd22201b77e55aa2b222d869ef8
+End-time: 1736537368.847559595
+-----
+Run: 5
+Payload: {"search_term": "apple"}
+Start-time: 1736537369.234341046
+Pod Name (fuzzy-search-wasm): fuzzy-search-wasm-00001-deployment-6d5b7ddddf-nxxb2
+Container ID: 9da3aded68fc6fcd3dede257a8c8e672d4eab1bdabed578665c56d3083d0bb89
+Pod Name (fuzzy-search-wasm): fuzzy-search-wasm-00001-deployment-6d5b7ddddf-szr47
+Container ID: 48fa65df901c873181782a77d1c5258620328bd22201b77e55aa2b222d869ef8
+End-time: 1736537378.116476383
+-----

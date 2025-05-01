@@ -1,0 +1,36 @@
+-----
+Run: 1
+Payload: {"audio_length": 10, "storage_type": "memory", "path": "file.wav"}
+Start-time: 1736531842.513570610
+Pod Name (audio-generation-native): audio-generation-native-00001-deployment-68b84cbd9-d87wh
+Container ID: 973ff0500a8729ff62596d2f93ffc045c4730d9b9f5fbf5c456d51acc8ed0430
+End-time: 1736531850.505863728
+-----
+Run: 2
+Payload: {"audio_length": 10, "storage_type": "memory", "path": "file.wav"}
+Start-time: 1736531850.731332320
+Pod Name (audio-generation-native): audio-generation-native-00001-deployment-68b84cbd9-d87wh
+Container ID: 973ff0500a8729ff62596d2f93ffc045c4730d9b9f5fbf5c456d51acc8ed0430
+End-time: 1736531858.632511568
+-----
+Run: 3
+Payload: {"audio_length": 10, "storage_type": "memory", "path": "file.wav"}
+Start-time: 1736531858.870745320
+Pod Name (audio-generation-native): audio-generation-native-00001-deployment-68b84cbd9-d87wh
+Container ID: 973ff0500a8729ff62596d2f93ffc045c4730d9b9f5fbf5c456d51acc8ed0430
+End-time: 1736531866.525802854
+-----
+Run: 4
+Payload: {"audio_length": 10, "storage_type": "memory", "path": "file.wav"}
+Start-time: 1736531866.790104259
+Pod Name (audio-generation-native): audio-generation-native-00001-deployment-68b84cbd9-d87wh
+Container ID: 973ff0500a8729ff62596d2f93ffc045c4730d9b9f5fbf5c456d51acc8ed0430
+End-time: 1736531874.408617691
+-----
+Run: 5
+Payload: {"audio_length": 10, "storage_type": "memory", "path": "file.wav"}
+Start-time: 1736531874.643800523
+Pod Name (audio-generation-native): audio-generation-native-00001-deployment-68b84cbd9-d87wh
+Container ID: 973ff0500a8729ff62596d2f93ffc045c4730d9b9f5fbf5c456d51acc8ed0430
+End-time: 1736531882.347552994
+-----

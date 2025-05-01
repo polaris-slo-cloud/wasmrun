@@ -1,0 +1,36 @@
+-----
+Run: 1
+Payload: {"key": "sWXKbbmxgkqmWVsJYNgt9dApYfQpwVDK", "message": "This message should get encrypted."}
+Start-time: 1736541295.499146163
+Pod Name (encrypt-message-wasm): encrypt-message-wasm-00001-deployment-66898f89d-k7b4d
+Container ID: 4f57f2fb21dc0292a530ab00ca137d7047c455b4d657ce8a6631cbf4f48aa700
+End-time: 1736541303.911095986
+-----
+Run: 2
+Payload: {"key": "sWXKbbmxgkqmWVsJYNgt9dApYfQpwVDK", "message": "This message should get encrypted."}
+Start-time: 1736541304.254840697
+Pod Name (encrypt-message-wasm): encrypt-message-wasm-00001-deployment-66898f89d-k7b4d
+Container ID: 4f57f2fb21dc0292a530ab00ca137d7047c455b4d657ce8a6631cbf4f48aa700
+End-time: 1736541316.030512375
+-----
+Run: 3
+Payload: {"key": "sWXKbbmxgkqmWVsJYNgt9dApYfQpwVDK", "message": "This message should get encrypted."}
+Start-time: 1736541316.249780825
+Pod Name (encrypt-message-wasm): encrypt-message-wasm-00001-deployment-66898f89d-k7b4d
+Container ID: 4f57f2fb21dc0292a530ab00ca137d7047c455b4d657ce8a6631cbf4f48aa700
+End-time: 1736541325.654378012
+-----
+Run: 4
+Payload: {"key": "sWXKbbmxgkqmWVsJYNgt9dApYfQpwVDK", "message": "This message should get encrypted."}
+Start-time: 1736541325.946944442
+Pod Name (encrypt-message-wasm): encrypt-message-wasm-00001-deployment-66898f89d-k7b4d
+Container ID: 4f57f2fb21dc0292a530ab00ca137d7047c455b4d657ce8a6631cbf4f48aa700
+End-time: 1736541349.579324474
+-----
+Run: 5
+Payload: {"key": "sWXKbbmxgkqmWVsJYNgt9dApYfQpwVDK", "message": "This message should get encrypted."}
+Start-time: 1736541349.816012628
+Pod Name (encrypt-message-wasm): encrypt-message-wasm-00001-deployment-66898f89d-k7b4d
+Container ID: 4f57f2fb21dc0292a530ab00ca137d7047c455b4d657ce8a6631cbf4f48aa700
+End-time: 1736541357.998812407
+-----

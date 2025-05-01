@@ -1,0 +1,35 @@
+Setting up telemc-py.
+Python script is running with PID: 1632150
+Processing payload: 1 for function: language-detection
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Processing payload: 50 for function: language-detection
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Processing payload: 512 for function: language-detection
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Processing payload: 1024 for function: language-detection
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Processing payload: 2048 for function: language-detection
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Pod for function: language-detection-wasm already running.
+Attempting to terminate the Python script with PID: 1632150...
+Python script with PID 1632150 terminated successfully.
+Measure script completed.

@@ -1,0 +1,36 @@
+-----
+Run: 1
+Payload: {"n": 1000}
+Start-time: 1736540921.149950827
+Pod Name (planet-system-simulation-native): planet-system-simulation-native-00001-deployment-6bdb8666-prwrh
+Container ID: 3eb0b9a59e838828ede75cdf4e63aad0183f2b433ab63b373e0387ccc197496c
+End-time: 1736540935.024504143
+-----
+Run: 2
+Payload: {"n": 1000}
+Start-time: 1736540935.254107672
+Pod Name (planet-system-simulation-native): planet-system-simulation-native-00001-deployment-6bdb8666-prwrh
+Container ID: 3eb0b9a59e838828ede75cdf4e63aad0183f2b433ab63b373e0387ccc197496c
+End-time: 1736540942.756195900
+-----
+Run: 3
+Payload: {"n": 1000}
+Start-time: 1736540943.033054461
+Pod Name (planet-system-simulation-native): planet-system-simulation-native-00001-deployment-6bdb8666-prwrh
+Container ID: 3eb0b9a59e838828ede75cdf4e63aad0183f2b433ab63b373e0387ccc197496c
+End-time: 1736540950.893268667
+-----
+Run: 4
+Payload: {"n": 1000}
+Start-time: 1736540951.143512469
+Pod Name (planet-system-simulation-native): planet-system-simulation-native-00001-deployment-6bdb8666-prwrh
+Container ID: 3eb0b9a59e838828ede75cdf4e63aad0183f2b433ab63b373e0387ccc197496c
+End-time: 1736540969.962496494
+-----
+Run: 5
+Payload: {"n": 1000}
+Start-time: 1736540970.171019325
+Pod Name (planet-system-simulation-native): planet-system-simulation-native-00001-deployment-6bdb8666-prwrh
+Container ID: 3eb0b9a59e838828ede75cdf4e63aad0183f2b433ab63b373e0387ccc197496c
+End-time: 1736540977.502162332
+-----

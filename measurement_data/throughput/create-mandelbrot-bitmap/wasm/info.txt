@@ -1,0 +1,54 @@
+-----
+Run: 1
+Payload: {"image_size": 16, "storage_type": "memory", "output_path": "file.pbm"}
+Start-time: 1736542696.723913801
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-gvz8v
+Container ID: 2c660d460112aedd7c2a0b94aec7f77c48cb124f356a095d41895d7a5aeb1f3f
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-hxcxc
+Container ID: e5d667a95b4cedd334006f3f6c1e466d7ff5876c34c5be3fe232d5a919ba7cc8
+End-time: 1736542711.223295093
+-----
+Run: 2
+Payload: {"image_size": 16, "storage_type": "memory", "output_path": "file.pbm"}
+Start-time: 1736542711.518526921
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-gvz8v
+Container ID: 2c660d460112aedd7c2a0b94aec7f77c48cb124f356a095d41895d7a5aeb1f3f
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-hxcxc
+Container ID: e5d667a95b4cedd334006f3f6c1e466d7ff5876c34c5be3fe232d5a919ba7cc8
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-pxrw2
+Container ID: 74cb3598f275a621c2770fb129e32537285b20a8b558111257123501f5c10bfe
+End-time: 1736542724.622845528
+-----
+Run: 3
+Payload: {"image_size": 16, "storage_type": "memory", "output_path": "file.pbm"}
+Start-time: 1736542724.856932250
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-gvz8v
+Container ID: 2c660d460112aedd7c2a0b94aec7f77c48cb124f356a095d41895d7a5aeb1f3f
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-hxcxc
+Container ID: e5d667a95b4cedd334006f3f6c1e466d7ff5876c34c5be3fe232d5a919ba7cc8
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-pxrw2
+Container ID: 74cb3598f275a621c2770fb129e32537285b20a8b558111257123501f5c10bfe
+End-time: 1736542742.275672438
+-----
+Run: 4
+Payload: {"image_size": 16, "storage_type": "memory", "output_path": "file.pbm"}
+Start-time: 1736542742.560704632
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-gvz8v
+Container ID: 2c660d460112aedd7c2a0b94aec7f77c48cb124f356a095d41895d7a5aeb1f3f
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-hxcxc
+Container ID: e5d667a95b4cedd334006f3f6c1e466d7ff5876c34c5be3fe232d5a919ba7cc8
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-pxrw2
+Container ID: 74cb3598f275a621c2770fb129e32537285b20a8b558111257123501f5c10bfe
+End-time: 1736542751.923518764
+-----
+Run: 5
+Payload: {"image_size": 16, "storage_type": "memory", "output_path": "file.pbm"}
+Start-time: 1736542752.199543102
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-gvz8v
+Container ID: 2c660d460112aedd7c2a0b94aec7f77c48cb124f356a095d41895d7a5aeb1f3f
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-hxcxc
+Container ID: e5d667a95b4cedd334006f3f6c1e466d7ff5876c34c5be3fe232d5a919ba7cc8
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-7bfd57648f-pxrw2
+Container ID: 74cb3598f275a621c2770fb129e32537285b20a8b558111257123501f5c10bfe
+End-time: 1736542761.742804075
+-----

@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: telemd
+  namespace: telemd
+  labels:
+    app: telemd
+spec:
+  selector:
+    matchLabels:
+      app: telemd
+  template:
+    metadata:
+      labels:
+        app: telemd
+    spec:
+      containers:
+      - name: telemd
+        image: noah1170/telemd2
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/telemd
+        - name: proc
+          mountPath: /proc
+        - name: sys
+          mountPath: /sys
+          readOnly: true
+      volumes:
+      - name: config-volume
+        configMap:
+          name: telemd-config
+      - name: proc
+        hostPath:
+          path: /proc
+      - name: sys
+        hostPath:
+          path: /sys
+      hostNetwork: true

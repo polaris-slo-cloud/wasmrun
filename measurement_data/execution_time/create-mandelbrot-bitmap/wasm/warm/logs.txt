@@ -1,0 +1,35 @@
+Setting up telemc-py.
+Python script is running with PID: 2512119
+Processing payload: 128 for function: create-mandelbrot-bitmap
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Processing payload: 256 for function: create-mandelbrot-bitmap
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Processing payload: 512 for function: create-mandelbrot-bitmap
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Processing payload: 1024 for function: create-mandelbrot-bitmap
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Processing payload: 2048 for function: create-mandelbrot-bitmap
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Pod for function: create-mandelbrot-bitmap-wasm already running.
+Attempting to terminate the Python script with PID: 2512119...
+Python script with PID 2512119 terminated successfully.
+Measure script completed.
