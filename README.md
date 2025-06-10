@@ -18,7 +18,7 @@
 
 
 ## Measurement
-The following part explains the setup needed to reproduce the measurement results for execution times and scaleability in the [measurement_data](measurement_data) folder.
+The following part explains the setup needed to reproduce the measurement results for execution times and scaleability in the `$HOME/telemetry` folder.
 
 ---
 ### Prerequisites
