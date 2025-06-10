@@ -26,6 +26,10 @@ The following part explains the setup needed to reproduce the measurement result
 - The steps to create the inital setup are explained in [SETUP.md](docs/SETUP.md)
 - Many of the serverless functions use input files which are located in the [Resources](resources/files) folder. These files must be saved in Redis (or locally if this storage solution is prefered) under the their filename (including the file extension) e.g. with redis-cli: `redis-cli -x set search_text_1kb.txt`.
 
+```
+for file in resources/files/*; do redis-cli -x set "resources/files/$(basename "$file")" < "$file"; done
+```
+
 ---
 
 ### 1. Config
