@@ -1,6 +1,7 @@
 use serde::de::{self, Deserializer};
 use serde::Deserialize;
 use serde_json::{json, Value};
+use chrono::Utc;
 
 use aes_gcm::{
     aead::{Aead, AeadCore, KeyInit, OsRng},
@@ -44,7 +45,8 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
 
     match result {
         Ok(valid_json) => {
-
+            let mut retrieval_ms = 0.0;
+            let mut serial_ms = 0.0;
             let file_content = match valid_json.storage_type.as_deref() {
                 Some("local") => {
                     let path = valid_json.input_path.ok_or_else(|| "No input path provided for local storage")?;
@@ -57,8 +59,22 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                 }
                 Some("memory") => {
                     let path = valid_json.input_path.ok_or_else(|| "No input path provided for memory storage")?;
+                    let start_time = Utc::now();
+                    println!("Start retrieval at {}", start_time);
                     let content_bytes = get_memory(&path).await.map_err(|e| format!("Error retrieving memory content: {}", e))?;
-                    String::from_utf8(content_bytes).map_err(|e| format!("Error converting bytes to string: {}", e))?
+                    let mid_time = Utc::now();
+                    println!("Start serialization at {}", mid_time);
+                    let content = String::from_utf8(content_bytes).map_err(|e| format!("Error converting bytes to string: {}", e))?;
+                    // Record end time and duration
+                    let end_time = Utc::now();
+                    println!("Serialization finished at {}", end_time);
+                    let retrieval_ns = (mid_time - start_time).num_nanoseconds().unwrap_or(0);
+                    retrieval_ms = retrieval_ns as f64 / 1_000_000.0;
+                    let serial_ns = (end_time - mid_time).num_nanoseconds().unwrap_or(0);
+                    serial_ms = serial_ns as f64 / 1_000_000.0;
+
+                    println!("serialization took {} ms", serial_ms);
+                    content
                 }
                 _ => valid_json.message.expect("Expected message to be present in default case"),
             };
@@ -69,6 +85,8 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                 "status": "success",
                 "runtime": "native",
                 "data": {
+                    "data_retrieval": retrieval_ms,
+                    "serialization": serial_ms,
                     "encrpyted_data": BASE64_STANDARD.encode(encrypted_data)
                 }
             });

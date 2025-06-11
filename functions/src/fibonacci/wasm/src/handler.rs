@@ -19,6 +19,8 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                 "status": "success",
                 "runtime": "wasm",
                 "data": {
+                    "data_retrieval": 0,
+                    "serialization": 0,
                     "input": valid_json.number,
                     "output": fib_result
                 }

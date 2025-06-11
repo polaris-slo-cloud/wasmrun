@@ -1,5 +1,6 @@
 use serde::Deserialize;
 use serde_json::{json, Value};
+use chrono::Utc;
 
 #[derive(Deserialize)]
 struct Json {
@@ -19,6 +20,8 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                 "status": "success",
                 "runtime": "native",
                 "data": {
+                    "data_retrieval": 0,
+                    "serialization": 0,
                     "input": valid_json.number,
                     "output": fib_result
                 }

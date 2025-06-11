@@ -1,6 +1,6 @@
 use serde::Deserialize;
 use serde_json::{Value, json};
-
+use chrono::Utc;
 use shared_lib::storage_utils::{save_to_local, save_to_s3, store_memory};
 
 use std::ops::{Add, Mul, Sub, Index, IndexMut};
@@ -197,12 +197,21 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
     match result {
         Ok(valid_json) => {
             let bitmap_data = create_mandelbrot(valid_json.image_size);
-
+            let mut retrieval_ms = 0.0;
             // Try to save the bitmap based on storage type
             let save_result = match valid_json.storage_type.as_str() {
                 "local" => save_to_local(&valid_json.output_path, &bitmap_data).await?,
                 "s3" => save_to_s3(&valid_json.bucket.unwrap(), &valid_json.output_path, &bitmap_data).await?,
-                "memory" => store_memory(&valid_json.output_path, bitmap_data).await?,
+                "memory" => {
+                    let start_time = Utc::now();
+                    println!("Start retrieval at {}", start_time);
+                    let result = store_memory(&valid_json.output_path, bitmap_data).await?;
+                    let mid_time = Utc::now();
+                    println!("Retrieval finished at {}", mid_time);
+                    let retrieval_ns = (mid_time - start_time).num_nanoseconds().unwrap_or(0);
+                    retrieval_ms = retrieval_ns as f64 / 1_000_000.0;
+                    result
+                },
                 _ => return Err("Unsupported storage type".to_string()),
             };
 
@@ -211,6 +220,8 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                 "status": "success",
                 "runtime": "wasm",
                 "data": {
+                    "data_retrieval": retrieval_ms,
+                    "serialization": 0,
                     "save_path": save_result
                 }
             });

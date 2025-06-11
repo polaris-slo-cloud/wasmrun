@@ -1,5 +1,6 @@
 use serde::Deserialize;
 use serde_json::{Value, json};
+use chrono::Utc;
 
 #[derive(Deserialize)]
 struct Json {
@@ -9,16 +10,28 @@ struct Json {
 pub async fn handle_json(json: Value) -> Result<String, String> {
     let result: Result<Json, _> = serde_json::from_value(json); match result {
         Ok(valid_json) => {
-            let prime_numbers_result = prime_numbers(valid_json.limit);
+            let mut retrieval_ms = 0.0;
 
+            let prime_numbers_result = prime_numbers(valid_json.limit);
+            let mid_time = Utc::now();
+            println!("Start serialization at {}", mid_time);
              // Construct a success response
              let response = json!({
                 "status": "success",
                 "runtime": "native",
                 "data": {
+                     "data_retrieval": retrieval_ms,
+                     "serialization": serial_ms,
                     "result": prime_numbers_result
                 }
             });
+
+            // Record end time and duration
+            let end_time = Utc::now();
+            println!("Serialization finished at {}", end_time);
+            let serial_ns = (end_time - mid_time).num_nanoseconds().unwrap_or(0);
+            serial_ms = serial_ns as f64 / 1_000_000.0;
+
 
             Ok(response.to_string())
         }

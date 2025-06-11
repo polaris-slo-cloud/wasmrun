@@ -1,6 +1,6 @@
 use serde::Deserialize;
 use serde_json::{json, Value};
-
+use chrono::Utc;
 use hound;
 
 use std::f32::consts::PI;
@@ -24,6 +24,7 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
 
     match result {
         Ok(valid_json) => {
+            let mut retrieval_ms = 0.0;
             let audio_data = create_sine_wave(valid_json.audio_size);
 
             let save_result = match valid_json.storage_type.as_str() {
@@ -35,7 +36,16 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                         Err("Bucket name is required for S3 storage".to_string())?
                     }
                 }
-                "memory" => store_memory(&valid_json.path, audio_data).await?,
+                "memory" => {
+                    let start_time = Utc::now();
+                    println!("Start retrieval at {}", start_time);
+                    let result = store_memory(&valid_json.path, audio_data).await?;
+                    let mid_time = Utc::now();
+                    println!("Retrieval finished at {}", mid_time);
+                    let retrieval_ns = (mid_time - start_time).num_nanoseconds().unwrap_or(0);
+                    retrieval_ms = retrieval_ns as f64 / 1_000_000.0;
+                    result
+                },
                 _ => "Not saved - Unsupported storage type".to_string(),
             };
 
@@ -43,6 +53,8 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                 "status": "success",
                 "runtime": "wasm",
                 "data": {
+                    "data_retrieval": retrieval_ms,
+                    "serialization": 0,
                     "save_path" : save_result
                 }
             });

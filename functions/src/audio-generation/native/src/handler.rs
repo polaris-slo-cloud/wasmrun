@@ -56,6 +56,7 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                 "runtime": "native",
                 "data": {
                     "data_retrieval": retrieval_ms,
+                    "serialization": 0,
                     "save_path" : save_result
                 }
             });
