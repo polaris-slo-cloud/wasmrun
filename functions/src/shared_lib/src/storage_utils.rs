@@ -3,7 +3,7 @@ use std::env;
 use std::fs::File;
 use std::io::{Read,Write};
 use std::path::Path;
-
+use chrono::Utc;
 
 use redis::AsyncCommands;
 
@@ -46,6 +46,9 @@ pub async fn store_memory(key: &str, value: Vec<u8>) -> Result<String, String> {
         format!("Failed to create Redis client: {}", e)
     })?;
 
+    let start_time = Utc::now();
+    println!("Start retrieving key '{}' at {}", key, start_time);
+
     // Attempt to get the multiplexed connection
     let mut con = client.get_multiplexed_async_connection().await.map_err(|e| {
         println!("Error connecting to Redis: {}", e);
@@ -82,11 +85,31 @@ pub async fn get_memory(key: &str) -> Result<Vec<u8>, String> {
     })?;
 
     // Retrieve the value
-    con.get::<&str, Vec<u8>>(key).await.map_err(|e| {
+    //con.get::<&str, Vec<u8>>(key).await.map_err(|e| {
+    //    let err_msg = format!("Failed to retrieve value from Redis: {}", e);
+    //    println!("{}", err_msg);
+    //    err_msg
+    //})
+    // Record start time
+    let start_time = Utc::now();
+    println!("Start retrieving key '{}' at {}", key, start_time);
+
+    // Retrieve the value
+    let result = con.get::<&str, Vec<u8>>(key).await.map_err(|e| {
         let err_msg = format!("Failed to retrieve value from Redis: {}", e);
         println!("{}", err_msg);
         err_msg
-    })
+    });
+
+    // Record end time
+    let end_time = Utc::now();
+    let duration = end_time - start_time;
+    let duration_ns = (end_time - start_time).num_nanoseconds().unwrap_or(0);
+    let duration_ms = duration_ns as f64 / 1_000_000.0;
+    println!("Finished retrieving key '{}' at {}", key, end_time);
+    println!("Retrieval took {} ms", duration_ms);
+
+    result
 }
 
 /*

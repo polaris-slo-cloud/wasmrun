@@ -1,46 +1,46 @@
 -----
-Payload: 128
-Start-time: 1739219547.222764064
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-z5hds
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-8gbgz
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-6fcpx
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-gbhvh
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-x8pzr
-End-time: 1739219680.412270420
------
 Payload: 256
-Start-time: 1739219680.435596696
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-knx4q
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-krsx7
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-7666p
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-dq5qf
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-5cx6v
-End-time: 1739219810.259534331
+Start-time: 1737148991.882541357
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68gvxqw
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68ct6h2
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68xzrb9
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68s2m8j
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68crhgm
+End-time: 1737149104.414946203
 -----
 Payload: 512
-Start-time: 1739219810.268824213
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-cdr8g
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-mf78l
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-cv8dz
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-j42th
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-54qxb
-End-time: 1739219945.027164830
+Start-time: 1737149104.425554610
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd682bdb5
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68lb6ff
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68vlh6z
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd686p2bf
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd689gqtz
+End-time: 1737149229.378003411
 -----
 Payload: 1024
-Start-time: 1739219945.216002277
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-5j7hb
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-957vq
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-jms4f
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-frl46
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-mcl5t
-End-time: 1739220070.633541379
+Start-time: 1737149229.386660058
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68s6hnj
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68sq57k
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68clh28
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd686v7lf
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68qv6th
+End-time: 1737149361.869766449
 -----
 Payload: 2048
-Start-time: 1739220070.645979390
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-tc868
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-dvldh
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-f5tvt
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-9r8rt
-Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-5db7d874-fnt7v
-End-time: 1739220199.596742036
+Start-time: 1737149361.878396633
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd682zpdn
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68lp4sh
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68lwc6f
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68bwfg8
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68cx6lv
+End-time: 1737149486.525945006
+-----
+Payload: 4096
+Start-time: 1737149486.534496838
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd682hzqp
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68chhmt
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68cfw28
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd68lv7gp
+Pod Name (create-mandelbrot-bitmap-native): create-mandelbrot-bitmap-native-00001-deployment-59bd9fd686sdv7
+End-time: 1737149651.790240753
 -----

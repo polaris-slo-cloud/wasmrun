@@ -1,7 +1,6 @@
 Setting up telemc-py.
-Python script is running with PID: 1378141
+Python script is running with PID: 401268
 Processing payload: 1 for function: decrypt-message
-Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
@@ -12,30 +11,29 @@ Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
-Processing payload: 512 for function: decrypt-message
-Pod for function: decrypt-message-wasm already running.
-Pod for function: decrypt-message-wasm already running.
-Pod for function: decrypt-message-wasm already running.
-Pod for function: decrypt-message-wasm already running.
-Pod for function: decrypt-message-wasm already running.
 Processing payload: 1024 for function: decrypt-message
 Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
-Pod for function: decrypt-message-wasm already running.
-Processing payload: 2048 for function: decrypt-message
-Pod for function: decrypt-message-wasm already running.
+Processing payload: 10240 for function: decrypt-message
 Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
 Pod for function: decrypt-message-wasm already running.
-Attempting to terminate the Python script with PID: 1378141...
-Python script with PID 1378141 terminated successfully.
-Searching for ksvc matching function names: fibonacci|get-prime-numbers|fuzzy-search|create-mandelbrot-bitmap|planet-system-simulation|audio-generation|encrypt-message|decrypt-message|image-resize|hello-world|language-detection
-Found the following ksvc to delete:
-decrypt-message-wasm
-Deleting ksvc: decrypt-message-wasm
-Pod decrypt-message-wasm-00001-deployment-65689bc945-m848z deleted successfully.
+Pod for function: decrypt-message-wasm already running.
+Processing payload: 25600 for function: decrypt-message
+Pod for function: decrypt-message-wasm already running.
+[2025-01-06 23:32:29] Request failed for decrypt-message. HTTP code: 504
+Pod for function: decrypt-message-wasm already running.
+[2025-01-06 23:37:33] Request failed for decrypt-message. HTTP code: 504
+Pod for function: decrypt-message-wasm already running.
+[2025-01-06 23:42:34] Request failed for decrypt-message. HTTP code: 504
+Pod for function: decrypt-message-wasm already running.
+[2025-01-06 23:47:35] Request failed for decrypt-message. HTTP code: 504
+Pod for function: decrypt-message-wasm already running.
+[2025-01-06 23:52:36] Request failed for decrypt-message. HTTP code: 504
+Attempting to terminate the Python script with PID: 401268...
+Python script with PID 401268 terminated successfully.
 Running execution time test for image-resize with native runtime - warm
 Warm start is enabled.

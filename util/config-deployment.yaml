@@ -1,0 +1,112 @@
+apiVersion: v1
+data:
+  _example: |-
+    ################################
+    #                              #
+    #    EXAMPLE CONFIGURATION     #
+    #                              #
+    ################################
+
+    # This block is not actually functional configuration,
+    # but serves to illustrate the available configuration
+    # options and document them in a way that is accessible
+    # to users that `kubectl edit` this config map.
+    #
+    # These sample configuration options may be copied out of
+    # this example block and unindented to be in the data block
+    # to actually change the configuration.
+
+    # List of repositories for which tag to digest resolving should be skipped
+    registries-skipping-tag-resolving: "kind.local,ko.local,dev.local"
+
+    # Maximum time allowed for an image's digests to be resolved.
+    digest-resolution-timeout: "10s"
+
+    # Duration we wait for the deployment to be ready before considering it failed.
+    progress-deadline: "600s"
+
+    # Sets the queue proxy's CPU request.
+    # If omitted, a default value (currently "25m"), is used.
+    queue-sidecar-cpu-request: "25m"
+
+    # Sets the queue proxy's CPU limit.
+    # If omitted, no value is specified and the system default is used.
+    queue-sidecar-cpu-limit: "1000m"
+
+    # Sets the queue proxy's memory request.
+    # If omitted, no value is specified and the system default is used.
+    queue-sidecar-memory-request: "400Mi"
+
+    # Sets the queue proxy's memory limit.
+    # If omitted, no value is specified and the system default is used.
+    queue-sidecar-memory-limit: "800Mi"
+
+    # Sets the queue proxy's ephemeral storage request.
+    # If omitted, no value is specified and the system default is used.
+    queue-sidecar-ephemeral-storage-request: "512Mi"
+
+    # Sets the queue proxy's ephemeral storage limit.
+    # If omitted, no value is specified and the system default is used.
+    queue-sidecar-ephemeral-storage-limit: "1024Mi"
+
+    # The freezer service endpoint that queue-proxy calls when its traffic drops to zero or
+    # scales up from zero.
+    #
+    # Freezer service is available at: https://github.com/knative-sandbox/container-freezer
+    # or users may write their own service.
+    #
+    # The value will need to include both the host and the port that will be accessed.
+    # For the host, $HOST_IP can be passed, and the appropriate host IP value will be swapped
+    # in at runtime, which will enable the freezer daemonset to be reachable via the node IP.
+    #
+    # As an example:
+    #     concurrency-state-endpoint: "http://$HOST_IP:9696"
+    #
+    # If not set, queue proxy takes no action (this is the default behavior).
+    #
+    # When enabled, a serviceAccountToken will be mounted to queue-proxy using
+    # a projected volume. This requires the Service Account Token Volume Projection feature
+    # to be enabled. For details, see this link:
+    # https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#service-account-token-volume-projection
+    #
+    # NOTE THAT THIS IS AN EXPERIMENTAL / ALPHA FEATURE
+    concurrency-state-endpoint: ""
+  revision-timeout-seconds: "30"
+  max-revision-timeout-seconds: "600"
+  revision-response-start-timeout-seconds: "300"
+  revision-idle-timeout-seconds: "0"  # infinite
+  revision-cpu-request: "400m"
+  revision-memory-request: "100M"
+  revision-ephemeral-storage-request: "500M"
+  revision-cpu-limit: "1000m"
+  revision-memory-limit: "200M"
+  revision-ephemeral-storage-limit: "750M"
+  container-name-template: "user-container"
+  container-concurrency: "0"
+  container-concurrency-max-limit: "1000"
+  allow-container-concurrency-zero: "true"
+  enable-service-links: "false"
+  queue-sidecar-image: gcr.io/knative-releases/knative.dev/serving/cmd/queue@sha256:f78383554ed81895ff230217f3e0ce9bf9ff2048d4303cc9fb36342ac3f470b3
+kind: ConfigMap
+metadata:
+  annotations:
+    knative.dev/example-checksum: dd7ee769
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"_example":"################################\n#                              #\n#    EXAMPLE CONFIGURATION     #\n#                              #\n################################\n\n# This block is not actually functional configuration,\n# but serves to illustrate the available configuration\n# options and document them in a way that is accessible\n# to users that `kubectl edit` this config map.\n#\n# These sample configuration options may be copied out of\n# this example block and unindented to be in the data block\n# to actually change the configuration.\n\n# List of repositories for which tag to digest resolving should be skipped\nregistries-skipping-tag-resolving: \"kind.local,ko.local,dev.local\"\n\n# Maximum time allowed for an image's digests to be resolved.\ndigest-resolution-timeout: \"10s\"\n\n# Duration we wait for the deployment to be ready before considering it failed.\nprogress-deadline: \"600s\"\n\n# Sets the queue proxy's CPU request.\n# If omitted, a default value (currently \"25m\"), is used.\nqueue-sidecar-cpu-request: \"25m\"\n\n# Sets the queue proxy's CPU limit.\n# If omitted, no value is specified and the system default is used.\nqueue-sidecar-cpu-limit: \"1000m\"\n\n# Sets the queue proxy's memory request.\n# If omitted, no value is specified and the system default is used.\nqueue-sidecar-memory-request: \"400Mi\"\n\n# Sets the queue proxy's memory limit.\n# If omitted, no value is specified and the system default is used.\nqueue-sidecar-memory-limit: \"800Mi\"\n\n# Sets the queue proxy's ephemeral storage request.\n# If omitted, no value is specified and the system default is used.\nqueue-sidecar-ephemeral-storage-request: \"512Mi\"\n\n# Sets the queue proxy's ephemeral storage limit.\n# If omitted, no value is specified and the system default is used.\nqueue-sidecar-ephemeral-storage-limit: \"1024Mi\"\n\n# The freezer service endpoint that queue-proxy calls when its traffic drops to zero or\n# scales up from zero.\n#\n# Freezer service is available at: https://github.com/knative-sandbox/container-freezer\n# or users may write their own service.\n#\n# The value will need to include both the host and the port that will be accessed.\n# For the host, $HOST_IP can be passed, and the appropriate host IP value will be swapped\n# in at runtime, which will enable the freezer daemonset to be reachable via the node IP.\n#\n# As an example:\n#     concurrency-state-endpoint: \"http://$HOST_IP:9696\"\n#\n# If not set, queue proxy takes no action (this is the default behavior).\n#\n# When enabled, a serviceAccountToken will be mounted to queue-proxy using\n# a projected volume. This requires the Service Account Token Volume Projection feature\n# to be enabled. For details, see this link:\n# https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#service-account-token-volume-projection\n#\n# NOTE THAT THIS IS AN EXPERIMENTAL / ALPHA FEATURE\nconcurrency-state-endpoint: \"\"","queue-sidecar-image":"gcr.io/knative-releases/knative.dev/serving/cmd/queue@sha256:f78383554ed81895ff230217f3e0ce9bf9ff2048d4303cc9fb36342ac3f470b3"},"kind":"ConfigMap","metadata":{"annotations":{"knative.dev/example-checksum":"dd7ee769"},"labels":{"app.kubernetes.io/component":"controller","app.kubernetes.io/name":"knative-serving","app.kubernetes.io/version":"1.8.3"},"name":"config-deployment","namespace":"knative-serving","ownerReferences":[{"apiVersion":"operator.knative.dev/v1beta1","blockOwnerDeletion":true,"controller":true,"kind":"KnativeServing","name":"knative-serving","uid":"f3b9f4ba-4a1b-4ed1-8d37-43fb7649ed2a"}]}}
+    manifestival: new
+  creationTimestamp: "2025-01-12T10:47:38Z"
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/name: knative-serving
+    app.kubernetes.io/version: 1.8.3
+  name: config-deployment
+  namespace: knative-serving
+  ownerReferences:
+  - apiVersion: operator.knative.dev/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: KnativeServing
+    name: knative-serving
+    uid: f3b9f4ba-4a1b-4ed1-8d37-43fb7649ed2a
+  resourceVersion: "23526"
+  uid: d5479cec-114c-4ca8-9440-15191cf73b9d

@@ -1,7 +1,6 @@
 Setting up telemc-py.
-Python script is running with PID: 850443
+Python script is running with PID: 159812
 Processing payload: 10000 for function: get-prime-numbers
-Pod for function: get-prime-numbers-native already running.
 Pod for function: get-prime-numbers-native already running.
 Pod for function: get-prime-numbers-native already running.
 Pod for function: get-prime-numbers-native already running.
@@ -24,12 +23,7 @@ Pod for function: get-prime-numbers-native already running.
 Pod for function: get-prime-numbers-native already running.
 Pod for function: get-prime-numbers-native already running.
 Pod for function: get-prime-numbers-native already running.
-Attempting to terminate the Python script with PID: 850443...
-Python script with PID 850443 terminated successfully.
-Searching for ksvc matching function names: fibonacci|get-prime-numbers|fuzzy-search|create-mandelbrot-bitmap|planet-system-simulation|audio-generation|encrypt-message|decrypt-message|image-resize|hello-world|language-detection
-Found the following ksvc to delete:
-get-prime-numbers-native
-Deleting ksvc: get-prime-numbers-native
-Pod get-prime-numbers-native-00001-deployment-589c6c6bb4-kmc9c deleted successfully.
+Attempting to terminate the Python script with PID: 159812...
+Python script with PID 159812 terminated successfully.
 Running execution time test for get-prime-numbers with wasm runtime - warm
 Warm start is enabled.

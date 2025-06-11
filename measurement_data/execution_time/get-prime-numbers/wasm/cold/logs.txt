@@ -1,15 +1,10 @@
 Setting up telemc-py.
-Python script is running with PID: 2445299
+Python script is running with PID: 1050687
 Processing payload: 10000 for function: get-prime-numbers
 Processing payload: 100000 for function: get-prime-numbers
 Processing payload: 1000000 for function: get-prime-numbers
 Processing payload: 2500000 for function: get-prime-numbers
-Attempting to terminate the Python script with PID: 2445299...
-Python script with PID 2445299 terminated successfully.
-Searching for ksvc matching function names: get-prime-numbers|fuzzy-search|create-mandelbrot-bitmap|planet-system-simulation|audio-generation|encrypt-message|decrypt-message|language-detection
-Found the following ksvc to delete:
-get-prime-numbers-wasm
-Deleting ksvc: get-prime-numbers-wasm
-Pod get-prime-numbers-wasm-00001-deployment-849959944f-9qhn5 deleted successfully.
-Running execution time test for fuzzy-search with wasm runtime - cold
+Attempting to terminate the Python script with PID: 1050687...
+Python script with PID 1050687 terminated successfully.
+Running execution time test for planet-system-simulation with wasm runtime - cold
 Cold start is enabled.

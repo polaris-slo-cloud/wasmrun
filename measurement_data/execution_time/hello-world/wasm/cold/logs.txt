@@ -1,0 +1,5 @@
+Setting up telemc-py.
+Python script is running with PID: 1402142
+Attempting to terminate the Python script with PID: 1402142...
+Python script with PID 1402142 terminated successfully.
+Measure script completed.

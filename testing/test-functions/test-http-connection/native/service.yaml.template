@@ -1,0 +1,17 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: test-http-connection
+spec:
+  template:
+    spec:
+      timeoutSeconds: 10
+      containers:
+      - name: test-http-connection-native
+        image: ${IMAGE_REGISTRY}/test-http-connection-native:latest
+        ports:
+        - containerPort: 1234
+          protocol: TCP
+        livenessProbe:
+          tcpSocket:
+            port: 1234

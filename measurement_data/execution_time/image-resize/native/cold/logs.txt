@@ -1,15 +1,10 @@
 Setting up telemc-py.
-Python script is running with PID: 3528378
+Python script is running with PID: 1954493
 Processing payload: 1.5 for function: image-resize
 Processing payload: 2.0 for function: image-resize
 Processing payload: 2.5 for function: image-resize
 Processing payload: 3.0 for function: image-resize
-Attempting to terminate the Python script with PID: 3528378...
-Python script with PID 3528378 terminated successfully.
-Searching for ksvc matching function names: fibonacci|get-prime-numbers|fuzzy-search|create-mandelbrot-bitmap|planet-system-simulation|audio-generation|encrypt-message|decrypt-message|image-resize|hello-world|language-detection
-Found the following ksvc to delete:
-image-resize-native
-Deleting ksvc: image-resize-native
-Pod image-resize-native-00001-deployment-d656f49f4-b75bd deleted successfully.
-Running execution time test for image-resize with wasm runtime - cold
+Attempting to terminate the Python script with PID: 1954493...
+Python script with PID 1954493 terminated successfully.
+Running execution time test for hello-world with native runtime - cold
 Cold start is enabled.

@@ -88,15 +88,26 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
     }
 }
 
+
 fn decrypt(key_str: String, encrypted_data: Vec<u8>) -> String {
+    // Ensure encrypted data is at least 12 bytes (nonce length)
+    if encrypted_data.len() < 12 {
+        panic!(
+            "Encrypted data too short: expected at least 12 bytes, got {}",
+            encrypted_data.len()
+        );
+    }
+
     let key = Key::<Aes256Gcm>::from_slice(key_str.as_bytes());
 
+    // Split into nonce and ciphered data
     let (nonce_arr, ciphered_data) = encrypted_data.split_at(12);
     let nonce = Nonce::from_slice(nonce_arr);
 
     let cipher = Aes256Gcm::new(key);
 
-    let plaintext = cipher.decrypt(nonce, ciphered_data)
+    let plaintext = cipher
+        .decrypt(nonce, ciphered_data)
         .expect("failed to decrypt data");
 
     String::from_utf8(plaintext)

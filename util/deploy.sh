@@ -28,9 +28,9 @@ deploy_function_native() {
   echo "Deploying ${FUNCTION_NAME}..."
 
   if [ "$startup_type" == "cold" ]; then
-    envsubst < "$script_dir/service-native-cold.yaml.template" | kubectl apply -f -
+    envsubst < "$script_dir/service-native-cold.yaml.template" | microk8s kubectl apply -f -
   else
-    envsubst < "$script_dir/service-native.yaml.template" | kubectl apply -f -
+    envsubst < "$script_dir/service-native.yaml.template" | microk8s kubectl apply -f -
   fi
 }
 
@@ -42,9 +42,23 @@ deploy_function_wasm() {
   echo "Deploying ${FUNCTION_NAME}..."
 
   if [ "$startup_type" == "cold" ]; then
-    envsubst < "$script_dir/service-wasm-cold.yaml.template" | kubectl apply -f -
+    envsubst < "$script_dir/service-wasm-cold.yaml.template" | microk8s kubectl apply -f -
   else
-    envsubst < "$script_dir/service-wasm.yaml.template" | kubectl apply -f -
+    envsubst < "$script_dir/service-wasm.yaml.template" | microk8s kubectl apply -f -
+  fi
+}
+
+# Deploy wasm function
+deploy_function_wasm_aot() {
+  local function_name=$1
+  export FUNCTION_NAME="${function_name}-wasm-aot"
+
+  echo "Deploying ${FUNCTION_NAME}..."
+
+  if [ "$startup_type" == "cold" ]; then
+    envsubst < "$script_dir/service-wasm-cold.yaml.template" | microk8s kubectl apply -f -
+  else
+    envsubst < "$script_dir/service-wasm.yaml.template" | microk8s kubectl apply -f -
   fi
 }
 
@@ -56,7 +70,7 @@ if [ "$#" -eq 0 ]; then
   done
   read -p "Please enter the deployment target <function-name> (default: all): " function
   function=${function:-all}
-  read -p "Please enter the deployment type [native|wasm] (default: all): " deployment_type
+  read -p "Please enter the deployment type [native|wasm|wasm-aot] (default: all): " deployment_type
   deployment_type=${deployment_type:-all}
   read -p "Please enter the startup type to measure [cold|warm] (default: warm): " startup_type
   s=${startup_type:-warm}
@@ -74,7 +88,7 @@ elif [ "$#" -eq 3 ]; then
   startup_type=$3
 else
   echo "Too many arguments."
-  echo "Usage: $0 [<function-name>] [native|wasm] [cold|warm]"
+  echo "Usage: $0 [<function-name>] [native|wasm|wasm-aot] [cold|warm]"
   exit 1
 fi
 
@@ -90,6 +104,9 @@ case $function in
       if [ "$deployment_type" == "wasm" ] || [ "$deployment_type" == "all" ]; then
         deploy_function_wasm "$func" "$startup_type"
       fi
+      if [ "$deployment_type" == "wasm-aot" ] || [ "$deployment_type" == "all" ]; then
+        deploy_function_wasm_aot "$func" "$startup_type"
+      fi
     done
     ;;
   *)
@@ -100,9 +117,12 @@ case $function in
       if [ "$deployment_type" == "wasm" ] || [ "$deployment_type" == "all" ]; then
         deploy_function_wasm "$function" "$startup_type"
       fi
+      if [ "$deployment_type" == "wasm-aot" ] || [ "$deployment_type" == "all" ]; then
+        deploy_function_wasm_aot "$function" "$startup_type"
+      fi
     else
       echo "Unknown deployment target: $function"
-      echo "Usage: $0 [all|<function-name>] [native|wasm]"
+      echo "Usage: $0 [all|<function-name>] [native|wasm|wasm-aot]"
       exit 1
     fi
     ;;

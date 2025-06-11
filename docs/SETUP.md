@@ -6,7 +6,6 @@
 
 `sudo apt install buildah -y`
 
----
 
 ## Microk8s 
 
@@ -64,7 +63,6 @@ microk8s enable community
 ### 2. Add pvc
 `kubectl apply -f ~/bachelor/util/hostpath-storage/pvc.yaml`
 
----
 
 ## WASM
 
@@ -74,8 +72,6 @@ microk8s enable community
 ### 2. Deploy runtime
 
 `kubectl apply -f ~/bachelor/util/wasmedge-runtime.yaml`
-
----
 
 ## Knative
 
@@ -104,9 +100,7 @@ microk8s kubectl patch configmap/config-domain \
 --patch '{"data":{"example.com":""}}'
 ```
 
----
-
-## Storage Solutions
+## Benchmarking Utilities
 
 ### 1. Redis
 
@@ -119,50 +113,36 @@ sudo snap install redis
 redis-cli CONFIG SET protected-mode no
 ```
 
----
 
-## Benchmarking Utilities
+### 2. Telemd
 
-### 1. Telemd
-
-#### 1.1 Clone telemd
+#### 2.1 Build telemd
 ```
 git clone https://github.com/edgerun/telemd.git
-```
-
-#### 1.2 Build telemd
-```
 cd telemd
 makedocker
 docker tag edgerun/telemd:latest <your-dockerhub-username>/telemd:latest
 docker push <your-dockerhub-username>/telemd:latest
 ```
 
-#### 1.3 Apply configMap
+#### 2.2 Apply configMap
 `kubectl apply -f ~/bachelor/util/telemd/telemd-configMap.yaml`
 
-#### 1.4 Deploy telemd daemonset
+#### 2.3 Deploy telemd daemonset
 
 ```
 kubectl create namespace telemd
 kubectl apply -f ~/bachelor/util/telemd/telemd-daemonSet.yaml
 ```
 
-### 2. Telemc
+## Functions
 
-#### 1.1 Clone telemc
+### Prerequisites
 
+### Buildah
 ```
-cd ~
-git clone https://github.com/edgerun/telemc-py.git
-```
-
-#### 1.1 Build telemc
-
-```
-cd telemc-py
-make install
-source .venv/bin/activate
+sudo apt-get -y update
+sudo apt-get -y install buildah
 ```
 
 

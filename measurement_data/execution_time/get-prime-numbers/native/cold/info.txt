@@ -1,37 +1,37 @@
 -----
 Payload: 10000
-Start-time: 1739054623.862828632
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-m6q7t
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-6sgrz
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-jwdz6
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-5c9wh
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-5pzbn
-End-time: 1739054748.744181393
+Start-time: 1737147686.895386353
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-dzpw2
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-swvl6
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-2z5s9
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-k66n5
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-dlb8p
+End-time: 1737147792.351427334
 -----
 Payload: 100000
-Start-time: 1739054748.754251362
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-t9d76
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-n9kwx
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-k582b
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-nckr7
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-vfzp2
-End-time: 1739054877.571281966
+Start-time: 1737147792.359025495
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-lrbcn
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-22kf4
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-bmzdm
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-lzdh8
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-d24dz
+End-time: 1737147919.416709383
 -----
 Payload: 1000000
-Start-time: 1739054877.590083201
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-dmtb2
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-n8x6k
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-2qthv
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-6dtvq
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-sgg8w
-End-time: 1739055011.694681198
+Start-time: 1737147919.432199189
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-926rd
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-j7wdj
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-c78t9
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-djsgm
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-r4n7h
+End-time: 1737148048.528221650
 -----
 Payload: 2500000
-Start-time: 1739055011.703057424
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-npfrz
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-8d7fg
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-948wh
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-n25n5
-Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-7758b46db8-59xkl
-End-time: 1739055144.463309919
+Start-time: 1737148048.535643765
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-6tzf8
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-wmd7j
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-shhkz
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-52g4c
+Pod Name (get-prime-numbers-native): get-prime-numbers-native-00001-deployment-687867d4cf-s9nj5
+End-time: 1737148187.960241488
 -----

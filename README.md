@@ -1,34 +1,26 @@
-# Benchmarking Wasm-based Serverless Functions
+# bachelor
 
 ## Functions
 | Function | Category | Resource Utilization | Output - Storage Type | Input - Storage Type | Language | Source | Description |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Hello-World | Basic | - | - | - | Rust | - | [Desc](docs/functions/Hello-World.md) |
 | Fibonacci | Computational | CPU | - | - | Rust | [vhive-serverless](https://github.com/vhive-serverless/vSwarm/tree/main/benchmarks/fibonacci) | [Desc](docs/functions/Fibonacci.md) |
-| Image-Resize | Multimedia | I/O , Memory| S3, Local, Redis | - | Rust | [spcl/serverless-benchmarks](https://github.com/spcl/serverless-benchmarks/tree/master/benchmarks/200.multimedia/210.thumbnailer/python) | [Desc](docs/functions/Image-Resize.md) |
-| Audio-Generation | Multimedia | I/O , CPU | S3, Local, Redis | - | Rust | [korvoj/wasm-serverless-benchmarks](https://github.com/korvoj/wasm-serverless-benchmarks/tree/master/functions/rust/audio-sine-wave) | [Desc](docs/functions/Audio-Generation.md) |
-| Fuzzy-Search | - | I/O , CPU | - | S3, Local, Redis | Rust | [korvoj/wasm-serverless-benchmarks](https://github.com/korvoj/wasm-serverless-benchmarks/tree/master/functions/rust/fuzzysearch) | [Desc](docs/functions/Fuzzy-Search.md) |
+| Image-Resize | Multimedia | I/O ,CPU| S3, Local, Redis | - | Rust | [spcl/serverless-benchmarks](https://github.com/spcl/serverless-benchmarks/tree/master/benchmarks/200.multimedia/210.thumbnailer/python) | [Desc](docs/functions/Image-Resize.md) |
+| Audio-Generation | Multimedia | I/O, CPU | S3, Local, Redis | - | Rust | [korvoj/wasm-serverless-benchmarks](https://github.com/korvoj/wasm-serverless-benchmarks/tree/master/functions/rust/audio-sine-wave) | [Desc](docs/functions/Audio-Generation.md) |
+| Fuzzy-Search | - | I/O, CPU | - | S3, Local, Redis | Rust | [korvoj/wasm-serverless-benchmarks](https://github.com/korvoj/wasm-serverless-benchmarks/tree/master/functions/rust/fuzzysearch) | [Desc](docs/functions/Fuzzy-Search.md) |
 | Get-Prime-Numbers | Computational | CPU | - | -  | Rust | [korvoj/wasm-serverless-benchmarks](https://github.com/korvoj/wasm-serverless-benchmarks/tree/master/functions/rust/prime-numbers) | [Desc](docs/functions/Get-Prime-Numbers.md) |
-| Language-Detection | - | I/O , CPU , Memory | - | S3, Local, Redis  | Rust | [korvoj/wasm-serverless-benchmarks](https://github.com/korvoj/wasm-serverless-benchmarks/tree/master/functions/rust/whatlang) | [Desc](docs/functions/Language-Detection.md) |
+| Language-Detection | - | I/O, CPU , Memory | - | S3, Local, Redis  | Rust | [korvoj/wasm-serverless-benchmarks](https://github.com/korvoj/wasm-serverless-benchmarks/tree/master/functions/rust/whatlang) | [Desc](docs/functions/Language-Detection.md) |
 | Planet-System-Simulation | Scientific | CPU , Memory | - | -  | Rust | [korvoj/wasm-serverless-benchmarks](https://github.com/korvoj/wasm-serverless-benchmarks/tree/master/functions/rust/n-body) | [Desc](docs/functions/Planet-System-Simulation.md) |
-| Encrypt-Message | Security |  I/O , CPU | - | S3, Local, Redis | Rust | [vhive-serverless](https://github.com/vhive-serverless/vSwarm/tree/main/benchmarks/aes) | [Desc](docs/functions/Encrypt-Message.md) |
-| Decrypt-Message | Security |  I/O , CPU | - | S3, Local, Redis | Rust | [backendengineer](https://backendengineer.io/aes-encryption-rust) | [Desc](docs/functions/Decrypt-Message.md) |
-| Create-Mandelbrot-Bitmap | - | I/O , CPU | S3, Local, Redis | - | Rust | [BenchmarksGame](https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/mandelbrot-rust-4.html) | [Desc](docs/functions/Create-Mandelbrot-Bitmap.md) |
+| Encrypt-Message | Security |  I/O, CPU | - | S3, Local, Redis | Rust | [vhive-serverless](https://github.com/vhive-serverless/vSwarm/tree/main/benchmarks/aes) | [Desc](docs/functions/Encrypt-Message.md) |
+| Decrypt-Message | Security |  I/O, CPU | - | S3, Local, Redis | Rust | [backendengineer](https://backendengineer.io/aes-encryption-rust) | [Desc](docs/functions/Decrypt-Message.md) |
+| Create-Mandelbrot-Bitmap | - | I/O, CPU | S3, Local, Redis | - | Rust | [BenchmarksGame](https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/mandelbrot-rust-4.html) | [Desc](docs/functions/Create-Mandelbrot-Bitmap.md) |
 | Template | - | - | - | - | Rust | - | [Desc](docs/functions/Template.md) |
 
 
 ## Measurement
-The following part explains the setup needed to reproduce the measurement results for execution times and scaleability in the `$HOME/telemetry` folder.
+The following part explains the setup needed to reproduce the measurement results for execution times and scaleability in the [measurement_data](measurement_data) folder.
 
----
-### Prerequisites
-
-- The steps to create the inital setup are explained in [SETUP.md](docs/SETUP.md)
-- Many of the serverless functions use input files which are located in the [Resources](resources/files) folder. These files must be saved in Redis (or locally if this storage solution is prefered) under the their filename (including the file extension) e.g. with redis-cli: `redis-cli -x set search_text_1kb.txt`.
-
-```
-for file in resources/files/*; do redis-cli -x set "files:$(basename "$file")" < "$file"; done
-```
+The steps to create the inital setup are explained in [SETUP.md](docs/SETUP.md)
 
 ---
 
@@ -94,9 +86,7 @@ The script [measure_scaleability.sh](util/measure_scaleability.sh) is intended  
 
 ---
 
-### 4. Filtering of resource usage data
-
-The script [filter_resource_usage_data.py](measurement_data/filter_resource_usage_data.py) helps splitting the resource usage files for the performed runs and also trims the data.
+### 4. Clean up of resource usage data
 
 ---
 

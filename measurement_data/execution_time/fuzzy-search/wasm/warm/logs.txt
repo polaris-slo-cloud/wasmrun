@@ -1,18 +1,11 @@
 Setting up telemc-py.
-Python script is running with PID: 926740
+Python script is running with PID: 182229
 Processing payload: 1 for function: fuzzy-search
 Pod for function: fuzzy-search-wasm already running.
 Pod for function: fuzzy-search-wasm already running.
 Pod for function: fuzzy-search-wasm already running.
 Pod for function: fuzzy-search-wasm already running.
-Pod for function: fuzzy-search-wasm already running.
 Processing payload: 50 for function: fuzzy-search
-Pod for function: fuzzy-search-wasm already running.
-Pod for function: fuzzy-search-wasm already running.
-Pod for function: fuzzy-search-wasm already running.
-Pod for function: fuzzy-search-wasm already running.
-Pod for function: fuzzy-search-wasm already running.
-Processing payload: 512 for function: fuzzy-search
 Pod for function: fuzzy-search-wasm already running.
 Pod for function: fuzzy-search-wasm already running.
 Pod for function: fuzzy-search-wasm already running.
@@ -24,18 +17,29 @@ Pod for function: fuzzy-search-wasm already running.
 Pod for function: fuzzy-search-wasm already running.
 Pod for function: fuzzy-search-wasm already running.
 Pod for function: fuzzy-search-wasm already running.
-Processing payload: 2048 for function: fuzzy-search
+Processing payload: 10240 for function: fuzzy-search
 Pod for function: fuzzy-search-wasm already running.
+[2025-01-06 20:04:50] Request failed for fuzzy-search. HTTP code: 504
 Pod for function: fuzzy-search-wasm already running.
+[2025-01-06 20:09:50] Request failed for fuzzy-search. HTTP code: 504
 Pod for function: fuzzy-search-wasm already running.
+[2025-01-06 20:14:51] Request failed for fuzzy-search. HTTP code: 504
 Pod for function: fuzzy-search-wasm already running.
+[2025-01-06 20:19:52] Request failed for fuzzy-search. HTTP code: 504
 Pod for function: fuzzy-search-wasm already running.
-Attempting to terminate the Python script with PID: 926740...
-Python script with PID 926740 terminated successfully.
-Searching for ksvc matching function names: fibonacci|get-prime-numbers|fuzzy-search|create-mandelbrot-bitmap|planet-system-simulation|audio-generation|encrypt-message|decrypt-message|image-resize|hello-world|language-detection
-Found the following ksvc to delete:
-fuzzy-search-wasm
-Deleting ksvc: fuzzy-search-wasm
-Pod fuzzy-search-wasm-00001-deployment-69f545ccb9-8dqtp deleted successfully.
+[2025-01-06 20:24:52] Request failed for fuzzy-search. HTTP code: 504
+Processing payload: 25600 for function: fuzzy-search
+Pod for function: fuzzy-search-wasm already running.
+[2025-01-06 20:29:58] Request failed for fuzzy-search. HTTP code: 504
+Pod for function: fuzzy-search-wasm already running.
+[2025-01-06 20:34:59] Request failed for fuzzy-search. HTTP code: 504
+Pod for function: fuzzy-search-wasm already running.
+[2025-01-06 20:39:59] Request failed for fuzzy-search. HTTP code: 504
+Pod for function: fuzzy-search-wasm already running.
+[2025-01-06 20:45:00] Request failed for fuzzy-search. HTTP code: 504
+Pod for function: fuzzy-search-wasm already running.
+[2025-01-06 20:50:01] Request failed for fuzzy-search. HTTP code: 504
+Attempting to terminate the Python script with PID: 182229...
+Python script with PID 182229 terminated successfully.
 Running execution time test for create-mandelbrot-bitmap with native runtime - warm
 Warm start is enabled.

@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telemd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telemd
+  template:
+    metadata:
+      labels:
+        app: telemd
+    spec:
+      containers:
+      - name: telemd
+        image: keniack/telemd:d4b360f
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/telemd
+        - name: proc
+          mountPath: /proc
+          readOnly: false
+        - name: sys
+          mountPath: /sys
+          readOnly: true
+      volumes:
+      - name: config-volume
+        configMap:
+          name: telemd-config
+      - name: proc
+        hostPath:
+          path: /proc
+      - name: sys
+        hostPath:
+          path: /sys
+      nodeSelector:
+        kubernetes.io/hostname: "raspberrypi1"

@@ -1,18 +1,11 @@
 Setting up telemc-py.
-Python script is running with PID: 1632150
+Python script is running with PID: 502563
 Processing payload: 1 for function: language-detection
 Pod for function: language-detection-wasm already running.
 Pod for function: language-detection-wasm already running.
 Pod for function: language-detection-wasm already running.
 Pod for function: language-detection-wasm already running.
-Pod for function: language-detection-wasm already running.
 Processing payload: 50 for function: language-detection
-Pod for function: language-detection-wasm already running.
-Pod for function: language-detection-wasm already running.
-Pod for function: language-detection-wasm already running.
-Pod for function: language-detection-wasm already running.
-Pod for function: language-detection-wasm already running.
-Processing payload: 512 for function: language-detection
 Pod for function: language-detection-wasm already running.
 Pod for function: language-detection-wasm already running.
 Pod for function: language-detection-wasm already running.
@@ -24,12 +17,22 @@ Pod for function: language-detection-wasm already running.
 Pod for function: language-detection-wasm already running.
 Pod for function: language-detection-wasm already running.
 Pod for function: language-detection-wasm already running.
-Processing payload: 2048 for function: language-detection
+Processing payload: 10240 for function: language-detection
 Pod for function: language-detection-wasm already running.
+[2025-01-07 00:45:50] Request failed for language-detection. HTTP code: 504
 Pod for function: language-detection-wasm already running.
+[2025-01-07 00:47:03] Request failed for language-detection. HTTP code: 502
 Pod for function: language-detection-wasm already running.
+[2025-01-07 00:47:04] Request failed for language-detection. HTTP code: 502
 Pod for function: language-detection-wasm already running.
+[2025-01-07 00:52:06] Request failed for language-detection. HTTP code: 504
 Pod for function: language-detection-wasm already running.
-Attempting to terminate the Python script with PID: 1632150...
-Python script with PID 1632150 terminated successfully.
-Measure script completed.
+[2025-01-07 00:57:07] Request failed for language-detection. HTTP code: 504
+Processing payload: 25600 for function: language-detection
+Pod for function: language-detection-wasm already running.
+[2025-01-07 00:59:48] Request failed for language-detection. HTTP code: 502
+Pod for function: language-detection-wasm already running.
+[2025-01-07 00:59:49] Request failed for language-detection. HTTP code: 502
+Pod for function: language-detection-wasm already running.
+[2025-01-07 01:04:49] Request failed for language-detection. HTTP code: 504
+Pod for function: language-detection-wasm already running.

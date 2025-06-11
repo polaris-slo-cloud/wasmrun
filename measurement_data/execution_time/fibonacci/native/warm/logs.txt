@@ -1,7 +1,6 @@
 Setting up telemc-py.
-Python script is running with PID: 833130
+Python script is running with PID: 151920
 Processing payload: 10000 for function: fibonacci
-Pod for function: fibonacci-native already running.
 Pod for function: fibonacci-native already running.
 Pod for function: fibonacci-native already running.
 Pod for function: fibonacci-native already running.
@@ -24,12 +23,7 @@ Pod for function: fibonacci-native already running.
 Pod for function: fibonacci-native already running.
 Pod for function: fibonacci-native already running.
 Pod for function: fibonacci-native already running.
-Attempting to terminate the Python script with PID: 833130...
-Python script with PID 833130 terminated successfully.
-Searching for ksvc matching function names: fibonacci|get-prime-numbers|fuzzy-search|create-mandelbrot-bitmap|planet-system-simulation|audio-generation|encrypt-message|decrypt-message|image-resize|hello-world|language-detection
-Found the following ksvc to delete:
-fibonacci-native
-Deleting ksvc: fibonacci-native
-Pod fibonacci-native-00001-deployment-798bc8595d-zrc4z deleted successfully.
+Attempting to terminate the Python script with PID: 151920...
+Python script with PID 151920 terminated successfully.
 Running execution time test for fibonacci with wasm runtime - warm
 Warm start is enabled.

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: check-connection-wasm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: check-connection-wasm
+  template:
+    metadata:
+      labels:
+        app: check-connection-wasm
+    spec:
+      runtimeClassName: wasmedge
+      containers:
+      - name: check-connection-wasm
+        image: noah1170/check-connection-wasm:latest
+        ports:
+        - containerPort: 1234
+          protocol: TCP
+        livenessProbe:
+          tcpSocket:
+            port: 1234
+      hostNetwork: true

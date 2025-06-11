@@ -1,37 +1,37 @@
 -----
 Payload: 10000
-Start-time: 1739183623.386681057
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-vcmn8
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-6sqdl
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-jsckj
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-jjx48
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-flrvj
-End-time: 1739184015.539513437
+Start-time: 1736810746.471918860
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-zfxsw
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-9qdf6
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-jp2fc
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-5qr76
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-6w2fv
+End-time: 1736810946.921683784
 -----
 Payload: 100000
-Start-time: 1739100071.824805487
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-84f769799c-5w76h
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-84f769799c-7b9kn
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-84f769799c-kxk8b
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-84f769799c-nxpsk
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-84f769799c-2sk6t
-End-time: 1739100204.078749435
+Start-time: 1736810946.931100722
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-mzrcc
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-8crvm
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-47cmj
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-rjcgt
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-zsz5c
+End-time: 1736811157.155112846
 -----
 Payload: 1000000
-Start-time: 1739184618.827710715
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-4nsxq
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-8676w
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-6fq86
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-9stgv
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-fx9zp
-End-time: 1739184952.275548416
+Start-time: 1736811157.162503238
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-54g8z
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-lf6g2
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-vmvmk
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-n4l7v
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-xwplv
+End-time: 1736811495.563043110
 -----
 Payload: 2500000
-Start-time: 1739184952.333981630
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-twvfh
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-4ss57
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-n6bgg
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-4wvc9
-Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-849959944f-9qhn5
-End-time: 1739185679.205558210
+Start-time: 1736811495.571103598
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-b67xd
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-qnktt
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-h6695
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-jl9zt
+Pod Name (get-prime-numbers-wasm): get-prime-numbers-wasm-00001-deployment-66d8df9c96-dzc84
+End-time: 1736811852.374565368
 -----

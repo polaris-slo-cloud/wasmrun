@@ -1,0 +1,28 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: communicate-container-server-wasm
+spec:
+  template:
+    metadata:
+      annotations:
+        module.wasm.image/variant: compat-smart
+    spec:
+      runtimeClassName: wasmedge
+      timeoutSeconds: 10
+      containers:
+      - name: communicate-container-server-wasm
+        image: ${IMAGE_REGISTRY}/communicate-container-server-wasm:latest
+        ports:
+        - containerPort: 5678
+          protocol: TCP
+        livenessProbe:
+          tcpSocket:
+            port: 5678
+        volumeMounts:
+          - name: storage
+            mountPath: /data
+      volumes:
+      - name: storage
+        persistentVolumeClaim:
+          claimName: pvc

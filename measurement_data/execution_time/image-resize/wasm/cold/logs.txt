@@ -1,10 +1,10 @@
 Setting up telemc-py.
-Python script is running with PID: 2677634
+Python script is running with PID: 2894327
 Processing payload: 1.5 for function: image-resize
-[2025-02-10 20:56:30] Request failed for image-resize. HTTP code: 504
 Processing payload: 2.0 for function: image-resize
 Processing payload: 2.5 for function: image-resize
 Processing payload: 3.0 for function: image-resize
-Attempting to terminate the Python script with PID: 3030785...
-Python script with PID 3030785 terminated successfully.
-Measure script completed.
+Attempting to terminate the Python script with PID: 2894327...
+Python script with PID 2894327 terminated successfully.
+Running execution time test for language-detection with wasm runtime - cold
+Cold start is enabled.

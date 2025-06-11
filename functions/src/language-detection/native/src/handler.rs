@@ -1,6 +1,6 @@
 use serde::Deserialize;
 use serde_json::{Value, json};
-
+use chrono::Utc;
 use whatlang::detect;
 
 use shared_lib::storage_utils::{get_file_local, get_memory, get_from_s3};
@@ -36,7 +36,18 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                 Some("memory") => {
                     let path = valid_json.input_path.ok_or_else(|| "No input path provided for memory storage")?;
                     let content_bytes = get_memory(&path).await.map_err(|e| format!("Error retrieving memory content: {}", e))?;
-                    String::from_utf8(content_bytes).map_err(|e| format!("Error converting bytes to string: {}", e))?
+                    let start_time = Utc::now();
+                    println!("Start serialization at {}", start_time);
+                    let content=String::from_utf8(content_bytes).map_err(|e| format!("Error converting bytes to string: {}", e))?;
+                    // Record end time and duration
+                    let end_time = Utc::now();
+                    let duration = end_time - start_time;
+                    let duration_ns = (end_time - start_time).num_nanoseconds().unwrap_or(0);
+                    let duration_ms = duration_ns as f64 / 1_000_000.0;
+
+                    println!("Finished serialization at {}", end_time);
+                    println!("serialization took {} ms", duration_ms);
+                    content
                 }
                 _ => valid_json.input_text.expect("Expected input_text to be present in default case"),
             };

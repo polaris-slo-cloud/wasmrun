@@ -1,0 +1,14 @@
+FROM docker.io/library/rust:1.80.0-slim-bookworm as builder
+RUN rustup target add wasm32-wasi
+ENV RUSTFLAGS="--cfg wasmedge --cfg tokio_unstable"
+RUN mkdir /build
+COPY . /build/
+WORKDIR /build
+RUN cargo build --target wasm32-wasi --release
+RUN chmod +x target/wasm32-wasi/release/check-connection.wasm
+
+FROM scratch
+COPY --from=builder /build/target/wasm32-wasi/release/check-connection.wasm /
+COPY --from=builder /usr/local/bin/wasmedge /usr/local/bin/wasmedge
+COPY --from=builder /bin/sh /bin/sh
+ENTRYPOINT ["/check-connection.wasm"]

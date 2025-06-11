@@ -1,46 +1,46 @@
 -----
-Payload: 128
-Start-time: 1739188297.143276875
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-rrtbk
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-8nzmj
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-pnxc7
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-jw592
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-hrbzk
-End-time: 1739188685.008104888
------
 Payload: 256
-Start-time: 1739188685.017269437
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-gdwmf
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-pwpf4
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-q8jdx
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-xbnkt
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-rqmm5
-End-time: 1739188896.186365147
+Start-time: 1736857592.563938080
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-qc8f9
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-kntdl
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-5hqfh
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-jhp64
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-nrc92
+End-time: 1736857947.754957679
 -----
 Payload: 512
-Start-time: 1739188896.194421132
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-7lw5h
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-m95rq
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-68c76
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-l829k
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-nmrvs
-End-time: 1739189308.663557365
+Start-time: 1736857947.764282883
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-5plfp
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-xkbl9
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-zmrdg
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-cfs66
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-5bf5t
+End-time: 1736858255.021124997
 -----
 Payload: 1024
-Start-time: 1739189308.672035269
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-tlgsc
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-485cb
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-jg2qk
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-n4m65
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-jq9hx
-End-time: 1739189783.426734749
+Start-time: 1736858255.028976192
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-8dl4r
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-4v8xs
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-gxzst
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-jtkk8
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-nsbn2
+End-time: 1736858667.442989314
 -----
 Payload: 2048
-Start-time: 1739189783.440136140
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-cqp7r
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-5mqrm
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-2htg4
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-6z874
-Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-5f8478b9fb-tv28k
-End-time: 1739190399.559955251
+Start-time: 1736858667.450659371
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-9d54t
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-4vf7l
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-x5w79
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-8vqvl
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-q2jvq
+End-time: 1736859070.957881939
+-----
+Payload: 4096
+Start-time: 1736859070.966028105
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-wtr6f
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-cncv7
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-v5d5d
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-74tpp
+Pod Name (create-mandelbrot-bitmap-wasm): create-mandelbrot-bitmap-wasm-00001-deployment-6944459467-5mpgt
+End-time: 1736859854.937872755
 -----

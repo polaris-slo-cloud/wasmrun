@@ -1,0 +1,6 @@
+Setting up telemc-py.
+Python script is running with PID: 2012321
+Attempting to terminate the Python script with PID: 2012321...
+Python script with PID 2012321 terminated successfully.
+Running execution time test for language-detection with native runtime - cold
+Cold start is enabled.

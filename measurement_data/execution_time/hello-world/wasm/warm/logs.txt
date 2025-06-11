@@ -1,0 +1,10 @@
+Setting up telemc-py.
+Python script is running with PID: 494961
+Pod for function: hello-world-wasm already running.
+Pod for function: hello-world-wasm already running.
+Pod for function: hello-world-wasm already running.
+Pod for function: hello-world-wasm already running.
+Attempting to terminate the Python script with PID: 494961...
+Python script with PID 494961 terminated successfully.
+Running execution time test for language-detection with native runtime - warm
+Warm start is enabled.

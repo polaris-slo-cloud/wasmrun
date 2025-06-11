@@ -6,7 +6,7 @@ metadata:
 data:
   config.ini: |
 
-    telemd_redis_host="192.168.1.10"
+    telemd_redis_host="192.168.1.111"
     #telemd_redis_port="32601"
     
     telemd_instruments_enable="cpu freq ram kubernetes_cgrp_cpu kubernetes_cgrp_memory"

@@ -4,22 +4,22 @@
 source config.sh
 
 # options
-clear_files_on_run="true"
-runs=5
+clear_files_on_run="false"
+runs=1
 
 # functions
 declare -A functions=(
   ["hello-world"]=""
-  ["fibonacci"]='{"number": <VALUE>}' #cold-30s
-  ["audio-generation"]='{"audio_size": <VALUE>, "storage_type": "memory", "path": "audio-generation:file_<VALUE>.wav"}' #cold-120s
+  ["fibonacci"]='{"number": <VALUE>}' #cold-10s
+  ["audio-generation"]='{"audio_size": <VALUE>, "storage_type": "memory", "path": "audio-generation:file_<VALUE>.wav"}' #cold-60s
   ["image-resize"]='{"scale_factor": <VALUE>, "storage_type": "memory", "path": "image-resize:file_<VALUE>.jpg"}' #cold-60s ksvc deployment takes time..
-  ["fuzzy-search"]='{"search_term": "apple", "storage_type": "memory", "input_path": "search_text_<VALUE>kb.txt"}' #cold-120s
-  ["get-prime-numbers"]='{"limit": <VALUE>}' #cold-120s
-  ["language-detection"]='{"storage_type": "memory", "input_path": "spanish_text_<VALUE>kb.txt"}' #cold-120s
-  ["planet-system-simulation"]='{"n": <VALUE>}' #120s - last payload about 300s
-  ["encrypt-message"]='{"key" : "sWXKbbmxgkqmWVsJYNgt9dApYfQpwVDK", "storage_type": "memory", "input_path": "spanish_text_<VALUE>kb.txt"}' #cold-120s
-  ["decrypt-message"]='{"key" : "sWXKbbmxgkqmWVsJYNgt9dApYfQpwVDK", "storage_type": "memory", "input_path": "encrypted_text_<VALUE>kb.txt"}' #cold-120s
-  ["create-mandelbrot-bitmap"]='{"image_size": <VALUE>, "storage_type": "memory", "output_path": "create-mandelbrot-bitmap:file_<VALUE>.pbm"}' #cold-120s
+  ["fuzzy-search"]='{"search_term": "apple", "storage_type": "memory", "input_path": "files:search_text_<VALUE>kb.txt"}' #cold-60s
+  ["get-prime-numbers"]='{"limit": <VALUE>}' #cold-60s
+  ["language-detection"]='{"storage_type": "memory", "input_path": "files:spanish_text_<VALUE>kb.txt"}' #cold-60s
+  ["planet-system-simulation"]='{"n": <VALUE>}' #60s - last payload about 5m
+  ["encrypt-message"]='{"key" : "sWXKbbmxgkqmWVsJYNgt9dApYfQpwVDK", "storage_type": "memory", "input_path": "files:spanish_text_<VALUE>kb.txt"}' #cold-60s
+  ["decrypt-message"]='{"key" : "sWXKbbmxgkqmWVsJYNgt9dApYfQpwVDK", "storage_type": "memory", "input_path": "files:encrypted_text_<VALUE>kb.txt"}' #cold-60s
+  ["create-mandelbrot-bitmap"]='{"image_size": <VALUE>, "storage_type": "memory", "output_path": "create-mandelbrot-bitmap:file_<VALUE>.pbm"}' #cold-4m20s
 )
 
 # payloads
@@ -46,7 +46,7 @@ delete_all_ksvc() {
   echo "Searching for ksvc matching function names: $function_names" | tee -a $file_logs
 
   # Grab all ksvcs containing any of the function names
-  ksvcs=$(kubectl get ksvc --no-headers | grep -E "$function_names" | awk '{print $1}')
+  ksvcs=$(microk8s kubectl get ksvc --no-headers | grep -E "$function_names" | awk '{print $1}')
 
   if [[ -n "$ksvcs" ]]; then
     echo "Found the following ksvc to delete:" | tee -a $file_logs
@@ -54,19 +54,19 @@ delete_all_ksvc() {
 
     for ksvc in $ksvcs; do
       echo "Deleting ksvc: $ksvc" | tee -a $file_logs
-      kubectl delete ksvc "$ksvc"
+      microk8s kubectl delete ksvc "$ksvc"
 
       sleep 10
 
-      pod=$(kubectl get pod --no-headers | grep -E "$ksvc" | awk '{print $1}')
-      kubectl delete pods "$pod" --force --grace-period=0
+      pod=$(microk8s kubectl get pod --no-headers | grep -E "$ksvc" | awk '{print $1}')
+      microk8s kubectl delete pods "$pod" --force --grace-period=0
 
       # Confirm deletion
-      deleted=$(kubectl get pods --no-headers | grep -c "$pod")
+      deleted=$(microk8s kubectl get pods --no-headers | grep -c "$pod")
       if [[ "$deleted" -ne 0 ]]; then
         echo "Pod $pod failed to delete. Retrying..." | tee -a $file_logs
         sleep 5
-        kubectl delete pod "$pod" --wait=true
+        microk8s kubectl delete pod "$pod" --wait=true
       else
         echo "Pod $pod deleted successfully." | tee -a $file_logs
       fi
@@ -81,7 +81,7 @@ delete_all_active_pods() {
   function_names=$(echo "${!functions[@]}" | tr ' ' '|')
   echo "Searching for all pods matching function names: $function_names" | tee -a $file_logs
 
-  pods=$(kubectl get pods --no-headers | grep -E "^(${function_names})-" | awk '{print $1}')
+  pods=$(microk8s kubectl get pods --no-headers | grep -E "^(${function_names})-" | awk '{print $1}')
 
   if [[ -n "$pods" ]]; then
     echo "Found the following pods to delete:" | tee -a $file_logs
@@ -89,16 +89,16 @@ delete_all_active_pods() {
 
      for pod in $pods; do
       echo "Deleting pod: $pod" | tee -a $file_logs
-      kubectl delete pod "$pod" --wait=false
+      microk8s kubectl delete pod "$pod" --wait=false
 
-      kubectl delete pod "$pod" --force
+      microk8s kubectl delete pod "$pod" --force
 
       # Confirm deletion
-      deleted=$(kubectl get pods --no-headers | grep -c "$pod")
+      deleted=$(microk8s kubectl get pods --no-headers | grep -c "$pod")
       if [[ "$deleted" -ne 0 ]]; then
         echo "Pod $pod failed to delete. Retrying..." | tee -a $file_logs
         sleep 5
-        kubectl delete pod "$pod" --wait=true
+        microk8s kubectl delete pod "$pod" --wait=true
       else
         echo "Pod $pod deleted successfully." | tee -a $file_logs
       fi
@@ -126,7 +126,7 @@ spin_up_pod() {
   # Restore curl_cmd as an array
   eval "curl_cmd=($curl_cmd_string)"
 
-  local pods=$(kubectl get pods --no-headers --field-selector status.phase=Running | grep "^${function_name}-${runtime}" | awk '{print $1}')
+  local pods=$(microk8s kubectl get pods --no-headers --field-selector status.phase=Running | grep "^${function_name}-${runtime}" | awk '{print $1}')
 
   if [[ -z "$pods" ]]; then
       # Spin up pod for warms start
@@ -137,8 +137,8 @@ spin_up_pod() {
         response=$("${curl_cmd[@]}" -o /dev/null -w "%{http_code}")
         if [[ "$response" == "200" ]]; then
 
-          local started_pod=$(kubectl get pods --no-headers | grep "^${function_name}-${runtime}" | awk '{print $1}')
-          kubectl wait --for=jsonpath='{.status.phase}'=Running pod/$started_pod
+          local started_pod=$(microk8s kubectl get pods --no-headers | grep "^${function_name}-${runtime}" | awk '{print $1}')
+          microk8s kubectl wait --for=jsonpath='{.status.phase}'=Running pod/$started_pod
 
           success=true
           break
@@ -160,23 +160,23 @@ delete_pod() {
   local function_name="$1"
   local runtime="$2"
 
-  local pods=$(kubectl get pods --no-headers | grep "^${function_name}-${runtime}" | awk '{print $1}')
+  local pods=$(microk8s kubectl get pods --no-headers | grep "^${function_name}-${runtime}" | awk '{print $1}')
 
   if [[ -n "$pods" ]]; then
     echo "Deleting pods for function: $function_name-$runtime..." | tee -a $file_logs
     
     for pod in $pods; do
       echo "Deleting pod: $pod" | tee -a $file_logs
-      kubectl delete pod "$pod" --wait=false
+      microk8s kubectl delete pod "$pod" --wait=false
 
-      kubectl delete pod "$pod" --force
+      microk8s kubectl delete pod "$pod" --force
 
       # Confirm deletion
-      deleted=$(kubectl get pods --no-headers | grep -c "$pod")
+      deleted=$(microk8s kubectl get pods --no-headers | grep -c "$pod")
       if [[ "$deleted" -ne 0 ]]; then
         echo "Pod $pod failed to delete. Retrying..." | tee -a $file_logs
         sleep 5
-        kubectl delete pod "$pod" --wait=true
+        microk8s kubectl delete pod "$pod" --wait=true
       else
         echo "Pod $pod deleted successfully." | tee -a $file_logs
       fi
@@ -225,7 +225,7 @@ execution_time() {
     #delete_pod "$function_name" "$runtime"
 
     echo "Waiting for pod $function_name-$runtime to terminate.."
-    while [ -n "$(kubectl get pods | grep "^${function_name}-${runtime}")" ]
+    while [ -n "$(microk8s kubectl get pods | grep "^${function_name}-${runtime}")" ]
     do 
       sleep 0.5
     done
@@ -240,10 +240,10 @@ execution_time() {
   local end_time=$(date +%s%N)
   local elapsed_time=$(((end_time - start_time) / 1000000)) #ms
 
-  kubectl get pods --no-headers -o custom-columns=":metadata.name" | grep "^${function_name}-${runtime}" | while read -r pod_name; do
+  microk8s kubectl get pods --no-headers -o custom-columns=":metadata.name" | grep "^${function_name}-${runtime}" | while read -r pod_name; do
     echo "Pod Name (${function_name}-${runtime}): $pod_name" >>"$file_info"
-    kubectl describe pod "$pod_name" | grep "Container ID" | head -n 1 | awk '{print $3}' | sed 's|containerd://||' | sed 's|^|Container ID: |' >>"$file_pod_id"
-    #kubectl describe pod "$pod_name" | grep "Container ID" | head -n 1 | awk '{print $3}' | sed 's|containerd://||'
+    microk8s kubectl describe pod "$pod_name" | grep "Container ID" | head -n 1 | awk '{print $3}' | sed 's|containerd://||' | sed 's|^|Container ID: |' >>"$file_pod_id"
+    #microk8s kubectl describe pod "$pod_name" | grep "Container ID" | head -n 1 | awk '{print $3}' | sed 's|containerd://||'
   done
 
   #write to file
@@ -352,6 +352,7 @@ if [ "$#" -lt 1 ]; then
   echo "  all"
   echo "  native"
   echo "  wasm"
+  echo "  wasm-aot"
   echo "Startup options:"
   echo "  all"
   echo "  warm"
@@ -408,7 +409,7 @@ if [[ "$function" == "all" ]]; then
   # Run tests for all functions
   for func in "${!functions[@]}"; do
     if [[ "$runtime" == "all" ]]; then
-      for run in "native" "wasm"; do
+      for run in "native" "wasm" "wasm-aot"; do
         # Run both warm and cold tests
         if [[ "$startup_type" == "all" ]]; then
           for startup in "warm" "cold"; do
@@ -432,7 +433,7 @@ else
   if [[ " ${!functions[@]} " =~ " $function " ]]; then
     # Run specific function tests
     if [[ "$runtime" == "all" ]]; then
-      for run in "native" "wasm"; do
+      for run in "native" "wasm" "wasm-aot"; do
         if [[ "$startup_type" == "all" ]]; then
           for start in "warm" "cold"; do
             run_test "$function" "$run" "$start"

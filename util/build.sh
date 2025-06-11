@@ -38,14 +38,28 @@ build-wasm() {
   echo "Building $1-wasm..."
 
   buildah build \
-  --build-arg FUNCTION_PATH="functions/src/$1/wasm" \
-  -f "functions/src/$1/wasm/Dockerfile" \
-  --annotation "module.wasm.image/variant=compat-smart" \
-  -t "$1-wasm" \
-  "$REPO_ROOT"
+    --build-arg FUNCTION_PATH="functions/src/$1/wasm" \
+    -f "functions/src/$1/wasm/Dockerfile" \
+    --annotation "module.wasm.image/variant=compat-smart" \
+    -t "$1-wasm" \
+    "$REPO_ROOT"
 
   echo "Pushing $1-wasm to $IMAGE_REGISTRY..."
   buildah push $1-wasm $IMAGE_REGISTRY/$1-wasm:latest
+}
+
+build-wasm-aot() {
+  echo "Building $1-wasm-aot (AOT compiled)..."
+
+  buildah build \
+    --build-arg FUNCTION_PATH="functions/src/$1/wasm" \
+    -f "functions/src/$1/wasm/Dockerfile.aot" \
+    --annotation "module.wasm.image/variant=compat-smart" \
+    -t "$1-wasm-aot" \
+    "$REPO_ROOT"
+
+  echo "Pushing $1-wasm-aot to $IMAGE_REGISTRY..."
+  buildah push $1-wasm-aot $IMAGE_REGISTRY/$1-wasm-aot:latest
 }
 
 if [ "$#" -lt 1 ]; then
@@ -56,7 +70,7 @@ if [ "$#" -lt 1 ]; then
   done
   read -p "Please enter the build function <function-name> (default: all): " function
   function=${function:-all}
-  read -p "Please enter the build type [native|wasm] (default: all): " build_type
+  read -p "Please enter the build type [native|wasm|wasm-aot|all] (default: all): " build_type
   build_type=${build_type:-all}
 elif [ "$#" -eq 1 ]; then
   function=$1
@@ -66,7 +80,7 @@ elif [ "$#" -eq 2 ]; then
   build_type=$2
 else
   echo "Too many arguments."
-  echo "Usage: $0 [<function-name>] [native|wasm]"
+  echo "Usage: $0 [<function-name>] [native|wasm|wasm-aot|all]"
   exit 1
 fi
 
@@ -81,6 +95,9 @@ all)
     if [ "$build_type" == "wasm" ] || [ "$build_type" == "all" ]; then
       build-wasm $item
     fi
+    if [ "$build_type" == "wasm-aot" ] || [ "$build_type" == "all" ]; then
+      build-wasm-aot $item
+    fi
   done
   ;;
 *)
@@ -92,12 +109,15 @@ all)
       if [ "$build_type" == "wasm" ] || [ "$build_type" == "all" ]; then
         build-wasm $item
       fi
+      if [ "$build_type" == "wasm-aot" ] || [ "$build_type" == "all" ]; then
+        build-wasm-aot $item
+      fi
       exit 0
     fi
   done
 
   echo "Unknown build function: $function"
-  echo "Usage: $0 [all|<function-name>] [native|wasm]"
+  echo "Usage: $0 [all|<function-name>] [native|wasm|wasm-aot]"
   exit 1
   ;;
 esac

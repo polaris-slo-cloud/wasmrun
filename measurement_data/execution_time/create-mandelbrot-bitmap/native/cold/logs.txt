@@ -1,10 +1,11 @@
 Setting up telemc-py.
-Python script is running with PID: 2572335
-Processing payload: 128 for function: create-mandelbrot-bitmap
+Python script is running with PID: 1603602
 Processing payload: 256 for function: create-mandelbrot-bitmap
 Processing payload: 512 for function: create-mandelbrot-bitmap
 Processing payload: 1024 for function: create-mandelbrot-bitmap
 Processing payload: 2048 for function: create-mandelbrot-bitmap
-Attempting to terminate the Python script with PID: 2572335...
-Python script with PID 2572335 terminated successfully.
-Measure script completed.
+Processing payload: 4096 for function: create-mandelbrot-bitmap
+Attempting to terminate the Python script with PID: 1603602...
+Python script with PID 1603602 terminated successfully.
+Running execution time test for planet-system-simulation with native runtime - cold
+Cold start is enabled.

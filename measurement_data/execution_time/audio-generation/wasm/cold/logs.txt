@@ -1,16 +1,12 @@
 Setting up telemc-py.
-Python script is running with PID: 3651684
+Python script is running with PID: 1250882
 Processing payload: 1 for function: audio-generation
 Processing payload: 50 for function: audio-generation
-Processing payload: 512 for function: audio-generation
 Processing payload: 1024 for function: audio-generation
-Processing payload: 2048 for function: audio-generation
-Attempting to terminate the Python script with PID: 3651684...
-Python script with PID 3651684 terminated successfully.
-Searching for ksvc matching function names: get-prime-numbers|fuzzy-search|create-mandelbrot-bitmap|planet-system-simulation|audio-generation|encrypt-message|decrypt-message|language-detection
-Found the following ksvc to delete:
-audio-generation-wasm
-Deleting ksvc: audio-generation-wasm
-Pod audio-generation-wasm-00001-deployment-5d878784f7-l89n5 deleted successfully.
-Running execution time test for encrypt-message with wasm runtime - cold
+Processing payload: 10240 for function: audio-generation
+Processing payload: 25600 for function: audio-generation
+[2025-01-14 00:48:30] Request failed for audio-generation. HTTP code: 504
+Attempting to terminate the Python script with PID: 1250882...
+Python script with PID 1250882 terminated successfully.
+Running execution time test for image-resize with wasm runtime - cold
 Cold start is enabled.

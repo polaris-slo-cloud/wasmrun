@@ -1,4 +1,4 @@
-FROM docker.io/library/rust:1.80.0-bullseye as builder
+FROM docker.io/library/rust:1.82.0-bullseye as builder
 ARG TARGETARCH=x86_64
 ARG FUNCTION_PATH
 RUN apt-get update && apt-get clean
@@ -12,7 +12,7 @@ RUN cargo build --release --target ${TARGETARCH}-unknown-linux-musl
 RUN ls -lah
 RUN chmod +x target/${TARGETARCH}-unknown-linux-musl/release/fuzzy-search-native
 
-FROM docker.io/library/rust:1.80.0-bullseye
+FROM docker.io/library/debian:bullseye-slim
 ARG TARGETARCH=x86_64
 COPY resources/files/. /
 COPY --from=builder /build/target/${TARGETARCH}-unknown-linux-musl/release/fuzzy-search-native /

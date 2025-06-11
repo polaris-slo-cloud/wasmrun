@@ -1,0 +1,21 @@
+FROM docker.io/library/rust:1.82.0-slim-bookworm as builder
+ARG FUNCTION_PATH
+RUN apt-get update && \
+    apt-get install -y curl git python3 python3-pip python3-venv && \
+    apt-get clean
+RUN curl -sSf https://raw.githubusercontent.com/WasmEdge/WasmEdge/master/utils/install.sh | bash -s -- -p /usr/local
+RUN mkdir /build
+COPY ${FUNCTION_PATH}/. /build/
+COPY functions/src/shared_lib/. /build/shared_lib
+RUN rustup target add wasm32-wasip1
+
+WORKDIR /build
+RUN cargo build --target wasm32-wasip1 --release
+
+RUN wasmedge compile target/wasm32-wasip1/release/fuzzy-search-wasm.wasm target/wasm32-wasip1/release/fuzzy-search-wasm-aot.wasm
+RUN chmod +x target/wasm32-wasip1/release/fuzzy-search-wasm-aot.wasm
+
+
+FROM scratch
+COPY --from=builder /build/target/wasm32-wasip1/release/fuzzy-search-wasm-aot.wasm /fuzzy-search-wasm.wasm
+ENTRYPOINT ["/fuzzy-search-wasm.wasm"]

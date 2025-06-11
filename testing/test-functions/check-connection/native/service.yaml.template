@@ -1,0 +1,24 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: check-connection-native
+spec:
+  template:
+    spec:
+      timeoutSeconds: 10
+      containers:
+      - name: check-connection-native
+        image: ${IMAGE_REGISTRY}/check-connection-native:latest
+        ports:
+        - containerPort: 1234
+          protocol: TCP
+        livenessProbe:
+          tcpSocket:
+            port: 1234
+        volumeMounts:
+          - name: storage
+            mountPath: /data
+      volumes:
+      - name: storage
+        persistentVolumeClaim:
+          claimName: pvc

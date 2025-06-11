@@ -1,0 +1,28 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: check-connection-wasm
+spec:
+  template:
+    metadata:
+      annotations:
+        module.wasm.image/variant: compat-smart
+    spec:
+      runtimeClassName: wasmedge
+      timeoutSeconds: 10
+      containers:
+      - name: check-connection-wasm
+        image: ${IMAGE_REGISTRY}/check-connection-wasm:latest
+        ports:
+        - containerPort: 1234
+          protocol: TCP
+        livenessProbe:
+          tcpSocket:
+            port: 1234
+        volumeMounts:
+          - name: storage
+            mountPath: /data
+      volumes:
+      - name: storage
+        persistentVolumeClaim:
+          claimName: pvc

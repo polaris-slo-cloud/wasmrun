@@ -1,0 +1,14 @@
+auth:
+  enabled: false
+
+hostNetwork: true
+
+master:
+#  nodeSelector:
+#    kubernetes.io/role: master
+  service:
+    type: NodePort
+    nodePorts:
+      redis: 32601
+
+#helm upgrade redis bitnami/redis -f ~/bachelor/util/redis-storage/values.yaml

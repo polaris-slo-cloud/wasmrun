@@ -4,7 +4,7 @@ import sys
 import redis
 import telemc
 
-rds = redis.Redis(host="192.168.1.10", decode_responses=True)
+rds = redis.Redis(host="192.168.1.111", decode_responses=True)
 
 home_directory = os.environ.get('HOME')
 path = sys.argv[1]
