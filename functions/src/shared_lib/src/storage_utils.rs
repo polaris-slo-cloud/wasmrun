@@ -103,7 +103,6 @@ pub async fn get_memory(key: &str) -> Result<Vec<u8>, String> {
 
     // Record end time
     let end_time = Utc::now();
-    let duration = end_time - start_time;
     let duration_ns = (end_time - start_time).num_nanoseconds().unwrap_or(0);
     let duration_ms = duration_ns as f64 / 1_000_000.0;
     println!("Finished retrieving key '{}' at {}", key, end_time);
