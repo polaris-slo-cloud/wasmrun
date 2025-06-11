@@ -46,7 +46,7 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                     let end_time = Utc::now();
                     println!("Serialization finished at {}", end_time);
                     let retrieval_ns = (mid_time - start_time).num_nanoseconds().unwrap_or(0);
-                    retrieval_ms = serial_ns as f64 / 1_000_000.0;
+                    retrieval_ms = retrieval_ns as f64 / 1_000_000.0;
                     let serial_ns = (end_time - mid_time).num_nanoseconds().unwrap_or(0);
                     serial_ms = serial_ns as f64 / 1_000_000.0;
 
