@@ -6,7 +6,7 @@ edition = "2018"
 [dependencies]
 hyper = { version = "0.14", features = ["full"]}
 tokio = { version = "1", features = ["rt", "macros", "net", "time", "io-util"]}
-
+chrono = "0.4"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 
