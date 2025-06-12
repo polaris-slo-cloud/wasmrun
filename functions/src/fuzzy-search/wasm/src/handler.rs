@@ -22,6 +22,8 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
 
     match result {
         Ok(valid_json) => {
+            let mut retrieval_ms = 0.0;
+            let mut serial_ms = 0.0;
             let file_content = match valid_json.storage_type.as_deref() {
                 Some("local") => {
                     let path = valid_json.input_path.ok_or_else(|| "No input path provided for local storage")?;
