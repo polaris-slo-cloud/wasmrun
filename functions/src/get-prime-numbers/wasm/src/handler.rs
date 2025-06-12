@@ -12,6 +12,7 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
     
     match result {
         Ok(valid_json) => {
+            let mut serial_ms = 0.0;
             let prime_numbers_result = prime_numbers(valid_json.limit);
             let mid_time = Utc::now();
             println!("Start serialization at {}", mid_time);
@@ -22,15 +23,15 @@ pub async fn handle_json(json: Value) -> Result<String, String> {
                "data": {
                    "result": prime_numbers_result
                }
-            });
+            }).to_string();
 
             // Record end time and duration
             let end_time = Utc::now();
             println!("Serialization finished at {}", end_time);
             let serial_ns = (end_time - mid_time).num_nanoseconds().unwrap_or(0);
             serial_ms = serial_ns as f64 / 1_000_000.0;
-
-            Ok(response.to_string())
+            println!("Serialization duration in ms {}", serial_ms);
+            Ok(response)
         }
         Err(e) => {
             
