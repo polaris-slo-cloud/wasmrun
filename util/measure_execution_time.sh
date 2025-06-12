@@ -236,7 +236,8 @@ execution_time() {
   fi
 
   local start_time=$(date +%s%N)
-  response=$("${curl_cmd[@]}" -o /dev/null -w "%{http_code}\n")
+  full_response=$(mktemp)
+  response=$("${curl_cmd[@]}" -o "$full_response" -w "%{http_code}")
   local end_time=$(date +%s%N)
   local elapsed_time=$(((end_time - start_time) / 1000000)) #ms
 
@@ -250,12 +251,20 @@ execution_time() {
   if [[ "$response" == "200" ]]; then
     msg="$function_name-$runtime,$elapsed_time"
     echo "$msg" >>"$file_time"
+
+    data_retrieval=$(jq -r '.data.data_retrieval // "N/A"' "$full_response")
+    serialization=$(jq -r '.data.serialization // "N/A"' "$full_response")
+
+    echo "$function_name-$runtime,data_retrieval:$data_retrieval,serialization:$serialization" >>"$file_metrics"
+
   else
     #error
     local timestamp=$(date +"%Y-%m-%d %H:%M:%S")
     msg="[$timestamp] Request failed for $function_name. HTTP code: $response"
     echo "$msg" | tee -a $file_logs
   fi
+
+  rm -f "$full_response"
 }
 
 process_execution_time_runs() {
@@ -274,6 +283,7 @@ process_execution_time_runs() {
 
   mkdir -p "$current_path"
 
+  file_metrics="$current_path/metrics.csv"
   file_info="$current_path/info.txt"
   file_logs="$current_path/logs.txt"
   file_pod_id="$current_path/pod_id.csv"
@@ -281,6 +291,7 @@ process_execution_time_runs() {
   file_mem="$current_path/mem.csv"
   file_cpu="$current_path/cpu.csv"
 
+  touch "$file_metrics"
   touch "$file_info"
   touch "$file_logs"
   touch "$file_pod_id"
