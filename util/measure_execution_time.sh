@@ -237,7 +237,7 @@ execution_time() {
 
   local start_time=$(date +%s%N)
   full_response=$(mktemp)
-  echo "Executing $curl_cmd_string"
+  echo "Executing \"$curl_cmd_string\""
   response=$("${curl_cmd[@]}" -o "$full_response" -w "%{http_code}")
   local end_time=$(date +%s%N)
   local elapsed_time=$(((end_time - start_time) / 1000000)) #ms
